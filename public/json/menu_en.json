@@ -1,0 +1,16 @@
+{
+    "home": "Home",
+    "about": "About Me",
+    "skills": "Skills",
+    "education": "Education",
+    "experiences": "Experience",
+    "projects": "Projects",
+    "contact": "Contact",
+    "language": "Language",
+    "resume": [
+        {
+            "title": "Resume",
+            "link": "https://drive.google.com/file/d/1-FUvSvgjDIho7zlz9w7vPMKz8a97v4GD/view"
+        }
+    ]
+}

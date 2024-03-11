@@ -1,0 +1,15 @@
+{
+    "home": "Home",
+    "about": "Sobre mi",
+    "skills": "Stack",
+    "education": "Educación",
+    "experiences": "Experiencia",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "language": "Idioma",
+    "resume": 
+        {
+            "title": "Curriculum",
+            "link": "https://drive.google.com/file/d/110ocegbjrCCNXBCh72ALDjTYxquBf-6L/view" 
+        }
+}

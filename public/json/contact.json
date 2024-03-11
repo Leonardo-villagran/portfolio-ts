@@ -1,0 +1,16 @@
+{
+    "title": "Contacto",
+    "name": "Nombre",
+    "email": "Correo Electrónico",
+    "message": "Mensaje",
+    "button": "Enviar",
+    "sending": "Enviando...",
+    "user_name_error": "Por favor, ingrese su nombre.",
+    "user_email_error": "Por favor, ingrese su correo electrónico.",
+    "user_email_error_valid": "Por favor, ingrese un correo electrónico válido.",
+    "error_message": "Por favor, ingrese su mensaje.",
+    "success_message": "¡Mensaje enviado correctamente! Me pondré en contacto pronto. ¡Muchas gracias!",
+    "danger_message": "Error al enviar el mensaje. Por favor, intentar de nuevo.",
+    "response_success": "Correo electrónico enviado con éxito!",
+    "response_error": "Error al enviar el correo electrónico:"
+}

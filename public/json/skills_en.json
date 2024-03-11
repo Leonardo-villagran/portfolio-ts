@@ -1,0 +1,93 @@
+{
+    "title": "Technology Stack",
+    "intro": "These are some of the main languages, technologies, tools, and platforms I have worked with:",
+    "skills": [
+        {
+            "title": "Languages & Databases",
+            "items": [
+                {
+                    "icon": "images/skills/js.png",
+                    "title": "JavaScript"
+                },
+                {
+                    "icon": "images/skills/python.png",
+                    "title": "Python"
+                },
+                {
+                    "icon": "images/skills/php.png",
+                    "title": "PHP"
+                },
+                {
+                    "icon": "images/skills/java.png",
+                    "title": "Java"
+                },
+                {
+                    "icon": "images/skills/mysql.png",
+                    "title": "MySQL"
+                },
+                {
+                    "icon": "images/skills/postgres.png",
+                    "title": "PostgreSQL"
+                },
+                {
+                    "icon": "images/skills/mongodb.png",
+                    "title": "MongoDB"
+                }
+            ]
+        },
+        {
+            "title": "Frameworks & Technologies",
+            "items": [
+                {
+                    "icon": "images/skills/nodejs.png",
+                    "title": "Node.js"
+                },
+                {
+                    "icon": "images/skills/react.png",
+                    "title": "React"
+                },
+                {
+                    "icon": "images/skills/express.png",
+                    "title": "Express"
+                },
+                {
+                    "icon": "images/skills/flask.png",
+                    "title": "Flask"
+                },
+                {
+                    "icon": "images/skills/leaflet.png",
+                    "title": "Leaflet"
+                },
+                {
+                    "icon": "images/skills/vite.png",
+                    "title": "Vite"
+                }
+            ]
+        },
+        {
+            "title": "Tools & Platforms",
+            "items": [
+                {
+                    "icon": "images/skills/vs_code.png",
+                    "title": "VS Code"
+                },
+                {
+                    "icon": "images/skills/git.png",
+                    "title": "Git"
+                },
+                {
+                    "icon": "images/skills/docker.png",
+                    "title": "Docker"
+                },
+                {
+                    "icon": "images/skills/odk.png",
+                    "title": "ODK Central"
+                },
+                {
+                    "icon": "images/skills/gcp.png",
+                    "title": "GCP"
+                }
+            ]
+        }
+    ]
+}

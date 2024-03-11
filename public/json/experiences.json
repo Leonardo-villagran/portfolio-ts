@@ -1,0 +1,56 @@
+{
+    "title": "Experiencia Laboral",
+    "content": [
+        {
+            "cardTitle": "Cloud Services Development Engineer",
+            "cardSubtitle": "Biotik - Freelance",
+            
+            "cardDetailedText": [
+                "Implementar y administrar sistemas de recolección y análisis de datos.",
+                "Desarrollar sistemas web Full-Stack."
+            ],
+            
+            "title": "2022 - presente",
+            "icon" : {
+                "src": "images/experiences/biotik.png"
+            }
+        },
+        {
+            "cardTitle": "Jefe Docente De Programación y Soporte De Gestión Educativa",
+            "cardSubtitle": "Liceo Comercial de Estación Central B-72 - Tiempo completo",
+            "cardDetailedText": [
+                "Dirigir al departamento de programación.",
+                "Impartir clases y preparar material docente.",
+                "Colaborar con diversos departamentos para uso adecuado de herramientas informáticas."
+            ],
+            "title": "2016 - 2022",
+            "icon" : {
+                "src": "images/experiences/b72.png"
+            }
+        },
+        {
+            "cardTitle": "Analista Estadístico y Gestión De Proyectos Informáticos",
+            "cardSubtitle": "Clínica Indisa - Tiempo completo",
+            "cardDetailedText": [
+                "Analizar, diseñar y automatizar plataformas informáticas.",
+                "Procesar, analizar y validar datos para la generación de informes."
+            ],
+            "title": "2013 - 2015",
+            "icon" : {
+                "src": "images/experiences/indisa.png"
+            }
+        },
+        {
+            "cardTitle": "Consultor De Gestión Educativa e Informática",
+            "cardSubtitle": "Itnline - Tiempo completo",
+            "cardDetailedText": [
+                "Desarrollar, implementar y administrar sistemas de gestión web para programa de subvención escolar preferencial.",
+                "Mejoramiento de cobertura curricular y SIMCE"
+            ],
+            "title": "2008 - 2013",
+            "icon" : {
+                "src": "images/experiences/itnline.png"
+            }
+        }
+    ]
+}

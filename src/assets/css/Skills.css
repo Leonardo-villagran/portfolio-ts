@@ -1,0 +1,10 @@
+.skill-icon {
+    transition: transform 0.2s ease-in-out;  /* Smooth transition on hover */
+  }
+  
+  .skill-icon:hover {
+    transform: scale(1.1);  /* Scale up slightly on hover */
+  }
+#chrono-container .chrono-navigation {
+    display: none;
+  }

@@ -1,0 +1,11 @@
+{
+    "title": "About Me",
+    "about": "Computer and Management Engineer with over 15 years of experience in the areas of software development and computer education. I have implemented and managed various web systems to support institutional management and tools for data control. Additionally, I have worked as a computer teacher, teaching programming and databases according to the Ministry of Education requirements. I am a goal-oriented professional with the ability to work in teams, committed to continuous learning and ongoing knowledge updates. Currently, I am seeking new professional challenges that allow me to continue developing in the field of computer management.",
+    "image": "images/about/profile.jpg",
+    "family": "My greatest motivation in life is undoubtedly my family, composed of my wife and daughter. Every step I take and every decision I make aims primarily to provide them with a better future. The simple idea of contributing to their well-being and happiness drives my daily actions. I enjoy every moment I share with them, as each laugh, each challenge overcome together, becomes fundamental pieces of our bond. Watching my daughter grow is a privilege that I greatly value. Her development serves as a constant source of joy and motivation for me to keep striving.",
+    "family_picture": "images/about/family.jpg",
+    "sport": "I used to bike to work every day, and it was something I really enjoyed. But since I started working remotely, that routine has stopped. I intend to resume the habit of cycling. I felt very good both emotionally and in terms of health, so I am planning to reintegrate it into my daily routine.",
+    "sport_picture": "images/about/bicicleta.jpg",
+    "hobbie": "In my leisure time, I enjoy listening to music, watching movies, and exploring YouTube. Additionally, I love accompanying my daughter to the playground, where she interacts with her friends. I take advantage of that moment to rest and enjoy the tranquility in contact with nature. These hobbies are my way of relaxing and enjoying life.",
+    "hobbie_picture": "images/about/hobbie.jpg"
+}

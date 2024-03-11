@@ -1,0 +1,16 @@
+{
+    "title": "Contact",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "button": "Send",
+    "sending": "Sending...",
+    "user_name_error": "Please enter your name.",
+    "user_email_error": "Please enter your email address.",
+    "user_email_error_valid": "Please enter a valid email address.",
+    "error_message": "Please enter your message.",
+    "success_message": "Message sent successfully! I will contact you soon. Thank you very much!",
+    "danger_message": "Error sending message. Please try again.",
+    "response_success": "Email sent successfully!",
+    "response_error": "Error sending email:"
+    }

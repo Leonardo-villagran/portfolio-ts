@@ -1,0 +1,12 @@
+{
+    "title": "Sobre mi",
+    "about": "Soy un Ingeniero en Gestión e Informática con más de 15 años de experiencia en las áreas de desarrollo y educación informática, en los cuales he implementado y administrado distintos sistemas web para apoyar la gestión institucional y herramientas para el control de datos. Por otro lado, he me desempeñado como docente informático, realizando clases de programación y bases de datos, según requerimientos del Ministerio de Educación. Soy un profesional orientado a objetivos con capacidad para trabajar en equipo, comprometido con el aprendizaje constante y actualización continua de conocimientos. Actualmente me encuentro en búsqueda de nuevos desafíos profesionales, que me permitan seguir desarrollándome en el ámbito de la gestión informática.",
+    "image": "images/about/profile.jpg",
+    "family": "Mi mayor motivación en la vida es, sin duda, mi familia, compuesta por mi esposa e hija. Cada paso que doy y cada decisión que tomo tienen como objetivo principal brindarles un futuro mejor. La simple idea de contribuir a su bienestar y felicidad impulsa mis acciones diarias. Disfruto intensamente cada momento que comparto con ellos, ya que cada risa, cada desafío superado en conjunto, se convierten en piezas fundamentales de nuestro vínculo. Ver crecer a mi hija es un privilegio que valoro enormemente. Su desarrollo se presenta como una fuente constante de alegría y motivación para seguir esforzándome.",
+    "family_picture": "images/about/family.jpg", 
+    "sport": "Solía ir al trabajo en bicicleta todos los días y era algo que realmente disfrutaba. Pero desde que comencé a trabajar de forma remota, esa rutina se ha detenido. Tengo la intención de retomar la costumbre de andar en bicicleta. Me sentía muy bien tanto anímicamente como en términos de salud, así que estoy planeando reintegrarlo a mi rutina diaria.",
+    "sport_picture": "images/about/bicicleta.jpg",
+    "hobbie": "En mis momentos de ocio, disfruto escuchando música, viendo películas y explorando YouTube. Además, me encanta acompañar a mi hija a la plaza, donde comparte con sus amigos. Aprovecho ese momento para descansar y disfrutar de la tranquilidad en contacto con la naturaleza. Estos pasatiempos son mi forma de relajarme y disfrutar de la vida.",
+    "hobbie_picture": "images/about/hobbie.jpg"
+    
+}
