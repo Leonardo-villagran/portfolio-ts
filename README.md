@@ -1,10 +1,10 @@
-## React Portfolio Website
+## React Portfolio-ts Website
 
-Este es un ejemplo básico de una aplicación de portafolio utilizando React y React Router para la navegación. La aplicación incluye una barra de navegación, secciones para la página de inicio, sobre mí, habilidades, educación, experiencias, proyectos y contacto. Se pueden personalizar los contenidos de cada sección editando los archivos JSON correspondientes en inglés y español. También se incluye un sistema de contacto que utiliza EmailJS para enviar emails a través de los servicios configurados con las credenciales proporcionadas.
+Este es un ejemplo básico de una aplicación de portafolio utilizando React y Typescript para la navegación. La aplicación incluye una barra de navegación, secciones para la página de inicio, sobre mí, habilidades, educación, experiencias, proyectos y contacto. Se pueden personalizar los contenidos de cada sección editando los archivos JSON correspondientes. También se incluye un sistema de contacto que utiliza EmailJS para enviar emails a través de los servicios configurados con las credenciales proporcionadas.
 
-Pueden ver el ejemplo en el siguiente enlace desde GitHub Pages: [https://leonardo-villagran.github.io/portfolio/](https://leonardo-villagran.github.io/portfolio/)
+Pueden ver el ejemplo en el siguiente enlace desde GitHub Pages: [https://leonardo-villagran.github.io/portfolio-ts/](https://leonardo-villagran.github.io/portfolio-ts/)
 
-Pueden ver el ejemplo en el siguiente enlace desde Render.com: [https://portfolio-o6cp.onrender.com/](https://portfolio-o6cp.onrender.com/)
+Pueden ver el ejemplo en el siguiente enlace desde Render.com: [https://portfolio-ts-f21x.onrender.com/portfolio-ts/](https://portfolio-ts-f21x.onrender.com/portfolio-ts/)
 
 
 ![alt text](public/images/cap_spanish.jpg)
@@ -34,8 +34,8 @@ Sigue estos pasos para configurar y ejecutar la aplicación en tu entorno local.
 #### 1. Clonar el Repositorio
 
 ```bash
-git clone https://github.com/Leonardo-villagran/portfolio
-cd portfolio
+git clone https://github.com/Leonardo-villagran/portfolio-ts
+cd portfolio-ts
 ```
 
 #### 2. Instalar Dependencias
@@ -50,26 +50,24 @@ npm install
 npm run dev
 ```
 
-La aplicación se ejecutará en modo de desarrollo. Abre [http://localhost:3000/portfolio/](http://localhost:3000/portfolio/) en tu navegador para verla.
+La aplicación se ejecutará en modo de desarrollo. Abre [http://localhost:3000/portfolio-ts/](http://localhost:3000/portfolio-ts/) en tu navegador para verla.
 
 ### Estructura del Proyecto
 
-- **`src/views/`**: Contiene las vistas de cada sección (Home, About, Skills, Education, Experiences, Projects, Contact).
-- **`src/components/`** Contiene los componentes con el código de programación de Home, About, Skills, Education, Experiences, Projects, Contact.
-- Cada vista posee un componente con el mismo nombre. Si desean agregar más cosas a la vista pueden hacerlo sin tocar el componente. La idea es que las vistas solo sean un conjunto de componentes. 
+- **`src/components/`** Contiene los componentes con el código de programación de Home, About, Skills, Education, Experiences, Projects, Contact. 
 - **`src/App.jsx`**: Archivo principal que configura las rutas y utiliza React Router.
 
 ### Configuración de las Rutas
 
 El archivo `src/App.jsx` utiliza React Router para manejar las rutas de la aplicación. A continuación, se describen las rutas disponibles:
 
-- `/portfolio/`: Página de inicio.
-- `/portfolio/about`: Página "Sobre Mí".
-- `/portfolio/skills`: Página de habilidades.
-- `/portfolio/education`: Página de educación.
-- `/portfolio/experiences`: Página de experiencias.
-- `/portfolio/projects`: Página de proyectos.
-- `/portfolio/contact`: Página de contacto.
+- `/portfolio-ts/`: Página de inicio.
+- `/portfolio-ts/about`: Página "Sobre Mí".
+- `/portfolio-ts/skills`: Página de habilidades.
+- `/portfolio-ts/education`: Página de educación.
+- `/portfolio-ts/experiences`: Página de experiencias.
+- `/portfolio-ts/projects`: Página de proyectos.
+- `/portfolio-ts/contact`: Página de contacto.
 
 Puedes personalizar estas rutas según tus necesidades y agregar más rutas según sea necesario.
 
@@ -152,18 +150,6 @@ Si deseas personalizar y adaptar este portafolio para tu propio uso, sigue estos
 
    - Todos los contenidos de las secciones (Inicio, Sobre Mí, Habilidades, Educación, Experiencias, Proyectos, Contacto) están almacenados en archivos JSON dentro de la carpeta `public/json/`.
 
-   - Lo primero es determinar en que idioma estará tu portafolio. El idioma se configura en el archivo llamado `public/json/app.json`. Si se coloca en español e inglés a la vez, aparecerá formulario de selección de idioma en la barra de navegación. Si solo hay un idioma, la web se desplegará en ese idioma y no se mostrará el selector. 
-
-
-```json
-{
-    "portfolioLanguages": {
-        "spanish": true,
-        "english": true
-    }
-}
-```      
-
    - Puedes editar estos archivos JSON (`home.json`, `about.json`, `skills.json`, etc.) para reflejar tus propios datos y detalles.
 
    -Los archivos en español tienen el nombre base, los archivos en inglés tienen el nombre base seguido de `_en`. Por ejemplo, `home.json` y `home_en.json`.
@@ -182,6 +168,7 @@ Para configurar el sistema de contacto, sigue estos pasos:
     VITE_SERVICE_ID=tu_service_ID
     VITE_TEMPLATE_ID=tu_template_ID
     VITE_USER_ID=tu_user_ID
+    VITE_ROOT_URL=portfolio-ts
     ```
 
    Asegúrate de reemplazar `'tu_service_ID'`, `'tu_template_ID'` y `'tu_user_ID'` con los valores específicos que obtuviste de EmailJS.
@@ -194,7 +181,7 @@ Para llevar a cabo la publicación de tu portafolio en GitHub Pages, sigue estas
 
 1. Clona o descarga el repositorio desde GitHub.
 
-2. Asegúrate de que el nombre de tu repositorio sea "portfolio", de lo contrario, las rutas no funcionarán correctamente.
+2. Asegúrate de que el nombre de tu repositorio sea "portfolio-ts", de lo contrario, las rutas no funcionarán correctamente.
 
 3. En el archivo `package.json`, sustituye mi nombre de usuario de GitHub por el tuyo en la sección `homepage`.
 
@@ -224,7 +211,7 @@ Siguiendo estos pasos, podrás desplegar tu portafolio en GitHub Pages de manera
 
 ![Repo](public/images/repo.jpg)
 
-5. Una vez seleccionado el proyecto /portfolio, configura el proyecto; primero escribe un nombre y luego selecciona el runtime como Node o Docker. En este caso, lo realizaré con Node. 
+5. Una vez seleccionado el proyecto /portfolio-ts, configura el proyecto; primero escribe un nombre y luego selecciona el runtime como Node o Docker. En este caso, lo realizaré con Node. 
 
 ![Node](public/images/node.jpg)
 
