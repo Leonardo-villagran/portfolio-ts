@@ -6,6 +6,7 @@ import '../assets/css/Menu.css';
 
 const Menu: React.FC = () => {
     const [menuData, setMenuData] = useState<MenuItem | null>(null);
+    const [menuOpen, setMenuOpen] = useState<boolean>(false); // Estado para controlar la visibilidad del menú
 
     useEffect(() => {
         const fetchMenuData = async () => {
@@ -20,6 +21,10 @@ const Menu: React.FC = () => {
         fetchMenuData();
     }, []);
 
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen); // Cambiar el estado del menú cuando se haga clic en la hamburguesa
+    };
+
     if (!menuData) {
         return <div>Loading...</div>;
     }
@@ -28,10 +33,10 @@ const Menu: React.FC = () => {
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
                 <a className="navbar-brand" href="/react-ts-portfolio/">{menuData.home}</a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button className="navbar-toggler" type="button" onClick={toggleMenu} aria-expanded={menuOpen ? 'true' : 'false'}>
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse" id="navbarNav">
+                <div className={`collapse navbar-collapse ${menuOpen ? 'show' : ''}`} id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
                             <Link to="/react-ts-portfolio/about">{menuData.about}</Link>
