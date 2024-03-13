@@ -4,6 +4,8 @@ import axios from 'axios';
 import { MenuItem } from '../interfaces/menu.interface';
 import '../assets/css/Menu.css';
 
+const root_url = import.meta.env.VITE_ROOT_URL;
+
 const Menu: React.FC = () => {
     const [menuData, setMenuData] = useState<MenuItem | null>(null);
     const [menuOpen, setMenuOpen] = useState<boolean>(false); // Estado para controlar la visibilidad del menú
@@ -32,29 +34,29 @@ const Menu: React.FC = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
-                <a className="navbar-brand" href="/react-ts-portfolio/">{menuData.home}</a>
+                <a className="navbar-brand" href={`/${root_url}/`}>{menuData.home}</a>
                 <button className="navbar-toggler" type="button" onClick={toggleMenu} aria-expanded={menuOpen ? 'true' : 'false'}>
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className={`collapse navbar-collapse ${menuOpen ? 'show' : ''}`} id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <Link to="/react-ts-portfolio/about">{menuData.about}</Link>
+                            <Link to={`/${root_url}/about`}>{menuData.about}</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/react-ts-portfolio/skills">{menuData.skills}</Link>
+                            <Link to={`/${root_url}/skills`}>{menuData.skills}</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/react-ts-portfolio/education">{menuData.education}</Link>
+                            <Link to={`/${root_url}/education`}>{menuData.education}</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/react-ts-portfolio/experiences">{menuData.experiences}</Link>
+                            <Link to={`/${root_url}/experiences`}>{menuData.experiences}</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/react-ts-portfolio/projects">{menuData.projects}</Link>
+                            <Link to={`/${root_url}/projects`}>{menuData.projects}</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/react-ts-portfolio/contact">{menuData.contact}</Link>
+                            <Link to={`/${root_url}/contact`}>{menuData.contact}</Link>
                         </li>
                         <li className="nav-item">
                             <a target="_blank" rel="noopener noreferrer" href={menuData.resume.link}>{menuData.resume.title}</a>

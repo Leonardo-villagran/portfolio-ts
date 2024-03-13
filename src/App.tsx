@@ -10,18 +10,20 @@ import Experiences from './components/Experiences';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 
+const root_url = import.meta.env.VITE_ROOT_URL;
+console.log(root_url);
 const App: React.FC = () => {
   return (
     <Router>
       <Menu />
       <Routes>
-        <Route path="/react-ts-portfolio/" element={<Home />} />
-        <Route path="/react-ts-portfolio/about" element={<About />} />
-        <Route path="/react-ts-portfolio/skills" element={<Skills />} />
-        <Route path="/react-ts-portfolio/education" element={<Education />} />
-        <Route path="/react-ts-portfolio/experiences" element={<Experiences />} />
-        <Route path="/react-ts-portfolio/projects" element={<Projects />} />
-        <Route path="/react-ts-portfolio/contact" element={<Contact />} />
+        <Route path={`/${root_url}/`} element={<Home />} />
+        <Route path={`/${root_url}/about`} element={<About />} />
+        <Route path={`/${root_url}/skills`} element={<Skills />} />
+        <Route path={`/${root_url}/education`} element={<Education />} />
+        <Route path={`/${root_url}/experiences`} element={<Experiences />} />
+        <Route path={`/${root_url}/projects`} element={<Projects />} />
+        <Route path={`/${root_url}/contact`} element={<Contact />} />
       </Routes>
     </Router>
   );
