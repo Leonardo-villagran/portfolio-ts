@@ -11,7 +11,6 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 
 const root_url = import.meta.env.VITE_ROOT_URL;
-console.log(root_url);
 const App: React.FC = () => {
   return (
     <Router>

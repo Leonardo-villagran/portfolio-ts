@@ -55,7 +55,7 @@ const ContactForm: React.FC = () => {
         setSubmitting(true);
 
         // Validación del formulario
-       const errors: FormErrors = { userName: '', email: '', message: '' };
+        const errors: FormErrors = { userName: '', email: '', message: '' };
 
         if (!formData.userName) {
             errors.userName = contactData?.user_name_error || '';
@@ -85,14 +85,14 @@ const ContactForm: React.FC = () => {
             reply_to: formData.email,
             message: formData.message,
         }, userId)
-            .then((response) => {
+            .then((response: unknown) => {
                 setSubmitting(false);
                 setSubmitSuccess(true);
                 setFormErrors({ userName: '', email: '', message: '' }); // Restablecer errores
                 setSubmitError(false); // Borrar mensaje de error si existe
                 console.log('Email sent:', response);
             })
-            .catch((error) => {
+            .catch((error: Error) => {
                 setSubmitting(false);
                 setSubmitError(true);
                 setSubmitSuccess(false); // Borrar mensaje de éxito si existe
