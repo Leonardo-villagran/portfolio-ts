@@ -1,0 +1,284 @@
+{
+    "title": "Proyectos",
+    "projects": [
+        {
+            "image": "images/projects/biotik.jpg",
+            "title": "Biotik - Web App",
+            "bodyText": [
+                "Web principal de la empresa.",
+                "Frontend desarrollado en React-Vite.",
+                "Backend desarrollado en Express.",
+                "Datos obtenidos desde Postgres."
+            ],
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/biotik-web-completo"
+                },
+                {
+                    "text": "Live",
+                    "href": "https://www.biotik.cl"
+                }
+            ],
+            "tags": [
+                "React-Vite",
+                "Express",
+                "Postgres",
+                "GCP",
+                "Proxy-Manager",
+                "Docker"
+            ]
+        },
+        {
+            "image": "images/projects/gestion.jpg",
+            "title": "Biotik - ODK Gestión",
+            "bodyText": [
+                "Sistema de gestión de usuarios y proyectos.",
+                "Visualización de proceso de proyectos a través de websockets.",
+                "Visualización de informes y mapas"
+            ],
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/odk-web-api"
+                },
+                {
+                    "text": "Live",
+                    "href": "https://gestion.biotik.cl"
+                }
+            ],
+            "tags": [
+                "React-Vite",
+                "Express",
+                "Websockets",
+                "Postgres",
+                "GCP",
+                "Google drive",
+                "Google maps",
+                "Docker"
+            ]
+        },
+        {
+            "image": "images/projects/process.jpg",
+            "title": "Biotik - ODK Process",
+            "bodyText": [
+                "Sistema de gestión de datos obtenidos desde servidor ODK Central.",
+                "Procesamiento de proyectos para generación de informes en Google Sheet."
+            ],
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/odk-2"
+                },
+                {
+                    "text": "Live",
+                    "href": "https://flask-app.biotik.cl"
+                }
+            ],
+            "tags": [
+                "Python",
+                "Flask",
+                "Websockets",
+                "Postgres",
+                "GCP",
+                "Google Sheet",
+                "ODK Central",
+                "Docker"
+            ]
+        },
+        {
+            "image": "images/projects/comics.jpg",
+            "title": "ComicsKites - Web App",
+            "bodyText": [
+                "Web principal de una tienda virtual de cómics.",
+                "Frontend desarrollado en React-Vite.",
+                "Datos obtenidos desde base de datos Postgres.",
+                "Proyecto final de Desafío Latam."
+            ],
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/comicskite_front"
+                },
+                {
+                    "text": "Live",
+                    "href": "https://react-comicskites.onrender.com"
+                }
+            ],
+            "tags": [
+                "React-Vite",
+                "Express",
+                "Postgres"
+            ]
+        },
+        {
+            "image": "images/projects/chicagoasociados.jpg",
+            "title": "Chicago Asesorias - Web App",
+            "bodyText": [
+                "Web principal de la empresa.",
+                "Frontend desarrollado en React.",
+                "Datos obtenidos desde Json.",
+                "App implementada en Github Pages."
+            ],
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/chicagoasesorias"
+                },
+                {
+                    "text": "Live",
+                    "href": "https://leonardo-villagran.github.io/chicagoasesorias/"
+                }
+            ],
+            "tags": [
+                "React",
+                "Json",
+                "GitHub Pages"
+            ]
+        },
+        {
+            "image": "images/projects/pizza.jpg",
+            "title": "Pizzería - Web App",
+            "bodyText": [
+                "Web principal de la empresa.",
+                "Frontend desarrollado en React.",
+                "Datos obtenidos desde Json.",
+                "App implementada en Netlify."
+            ],
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/pizzeria"
+                },
+                {
+                    "text": "Live",
+                    "href": "https://polite-babka-484d6e.netlify.app"
+                }
+            ],
+            "tags": [
+                "React",
+                "Json",
+                "Netlify"
+            ]
+        },
+        {
+            "image": "images/projects/portfolio.jpg",
+            "title": "Portafolio - Web App",
+            "bodyText": [
+                "Portafolio personal en inglés y/o español.",
+                "Frontend desarrollado en React-Vite.",
+                "Permite personalizar a través de archivos json.",
+                "App implementada en Github Pages."
+            ],
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/portfolio"
+                },
+                {
+                    "text": "Live",
+                    "href": "https://leonardo-villagran.github.io/portfolio/"
+                }
+            ],
+            "tags": [
+                "React",
+                "Vite",
+                "Json",
+                "Github Pages"
+            ]
+        },
+        {
+            "image": "images/projects/cuidadoras.jpg",
+            "title": "Cuidadoras - Web App",
+            "bodyText": [
+                "Web sobre cuidadoras de pacientes en sus hogares.",
+                "Frontend desarrollado en React.",
+                "Datos obtenidos desde Json|.",
+                "App implementada en Github Pages."
+            ],
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/cuidadoras"
+                },
+                {
+                    "text": "Live",
+                    "href": "https://leonardo-villagran.github.io/cuidadoras/"
+                }
+            ],
+            "tags": [
+                "React",
+                "Typescript",
+                "Json",
+                "Github Pages"
+            ]
+        },
+        {
+            "image": "images/projects/pokemon.jpg",
+            "title": "Frontend PokeApi - Web App",
+            "bodyText": [
+                "Web que obtiene pokemones desde un listado web.",
+                "Frontend desarrollado en React.",
+                "Datos obtenidos desde la PokeApi.",
+                "App implementada en Github Pages."
+            ],
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/pokemon-app"
+                },
+                {
+                    "text": "Live",
+                    "href": "https://polite-babka-484d6e.netlify.app"
+                }
+            ],
+            "tags": [
+                "React",
+                "Json",
+                "Github Pages"
+            ]
+        },
+        {
+            "image": "images/projects/postgres.jpg",
+            "title": "PostgreSQL desde Docker",
+            "bodyText": [
+                "Docker Compose de PostgreSQL.",
+                "Permite ejecutar un servidor de PostgreSQL.",
+                "Se puede personalizar la configuración desde docker-compose.yml y las variables de entorno."
+            ],
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/postgres_normal"
+                }
+            ],
+            "tags": [
+                "Docker",
+                "Docker Compose",
+                "PostgreSQL", 
+                "VS Code"
+            ]
+        },
+        {
+            "image": "images/projects/mongodb.jpg",
+            "title": "MongoDB desde Docker",
+            "bodyText": [
+                "Docker Compose de MongoDB.",
+                "Permite ejecutar un servidor de MongoDB.",
+                "Se puede personalizar la configuración desde docker-compose.yml y las variables de entorno."
+            ],
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/mongodb_normal"
+                }
+            ],
+            "tags": [
+                "Docker",
+                "Docker Compose",
+                "MongoDB", 
+                "VS Code"
+            ]
+        }
+    ]
+}

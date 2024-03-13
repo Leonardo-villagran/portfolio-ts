@@ -1,0 +1,55 @@
+{
+    "title": "Educación",
+    "content":[
+        {
+            "title": "2022 - 2023",
+            "cardTitle": "Desarrollo Full-Stack JavaScript",
+            "cardSubtitle":"Desafío Latam",
+            "icon" : {
+                "src": "images/education/desafio_latam.png"
+            }
+        },
+        {
+            "title": "2015 - 2017",
+            "cardTitle": "Magíster en Educación",
+            "cardSubtitle":"Universidad Católica Silva Henríquez",
+            "icon" : {
+                "src": "images/education/ucsh.png"
+            }
+        },
+        {
+            "title": "2016",
+            "cardTitle": "Diplomado en Gestión y Liderazgo Pedagógico",
+            "cardSubtitle":"Universidad Católica Silva Henríquez",
+            "icon" : {
+                "src": "images/education/ucsh.png"
+            }
+        },
+        {
+            "title": "2015",
+            "cardTitle": "Diplomado en Investigación Educacional",
+            "cardSubtitle":"Universidad Católica Silva Henríquez",
+            "icon" : {
+                "src": "images/education/ucsh.png"
+            }
+        }
+        ,
+        {
+            "title": "2003 - 2007",
+            "cardTitle": "Ingeniería en Informática y Gestión",
+            "cardSubtitle":"Universidad Diego Portales",
+            "icon" : {
+                "src": "images/education/udp.png"
+            }
+        }
+        ,
+        {
+            "title": "2007",
+            "cardTitle": "Diplomado en Gestión y Tecnología Informático",
+            "cardSubtitle":"Universidad Diego Portales",
+            "icon" : {
+                "src": "images/education/udp.png"
+            }
+        }
+    ]
+}
