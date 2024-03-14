@@ -11,8 +11,14 @@ export default defineConfig({
     outDir: 'dist', // Carpeta de salida para los archivos construidos
     sourcemap: false, // Desactivar mapas de origen para producción
   },
+  preview: {
+    port: 4173,
+    strictPort: true,
+   },
   server: {
-    host: '0.0.0.0',
-    port: 3000, // default: 3000
+    port: 4173,
+    strictPort: true,
+    host: true,
+    origin: "http://0.0.0.0:4173",
   }, 
 })
