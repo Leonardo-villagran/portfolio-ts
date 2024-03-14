@@ -11,10 +11,10 @@ export default defineConfig({
     outDir: 'dist', // Carpeta de salida para los archivos construidos
     sourcemap: false, // Desactivar mapas de origen para producción
   },
-  preview: {
-    port: 4173,
-    strictPort: true,
-   },
+  // preview: {
+  //   port: 4173,
+  //   strictPort: true,
+  //  },
   server: {
     port: 4173,
     strictPort: true,

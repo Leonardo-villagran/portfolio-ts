@@ -1,5 +1,5 @@
 # Utilizar una imagen de Node.js como base
-FROM node:alpine
+FROM node:20.11
 
 # Establecer el directorio de trabajo dentro del contenedor
 WORKDIR /usr/src/app
