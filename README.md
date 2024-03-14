@@ -4,7 +4,7 @@ Este es un ejemplo básico de una aplicación de portafolio utilizando React y T
 
 Pueden ver el ejemplo en el siguiente enlace desde GitHub Pages: [https://leonardo-villagran.github.io/portfolio-ts/](https://leonardo-villagran.github.io/portfolio-ts/)
 
-Pueden ver el ejemplo en el siguiente enlace desde Render.com: [https://portfolio-ts-f21x.onrender.com/portfolio-ts/](https://portfolio-ts-f21x.onrender.com/portfolio-ts/)
+Pueden ver el ejemplo en el siguiente enlace desde Render.com: [https://portfolio-ts-i9x2.onrender.com/portfolio-ts/](https://portfolio-ts-i9x2.onrender.com/portfolio-ts/)
 
 
 ![alt text](public/images/cap_spanish.jpg)
