@@ -4,7 +4,7 @@ Este es un ejemplo básico de una aplicación de portafolio utilizando React y T
 
 Pueden ver el ejemplo en el siguiente enlace desde GitHub Pages: [https://leonardo-villagran.github.io/portfolio-ts/](https://leonardo-villagran.github.io/portfolio-ts/)
 
-Pueden ver el ejemplo en el siguiente enlace desde Render.com: [https://portfolio-ts-i9x2.onrender.com/portfolio-ts/](https://portfolio-ts-i9x2.onrender.com/portfolio-ts/)
+Pueden ver el ejemplo en el siguiente enlace desde Render.com: [https://portfolio-ts-wkho.onrender.com/](https://portfolio-ts-wkho.onrender.com/)
 
 
 ![alt text](public/images/cap_spanish.jpg)
@@ -50,7 +50,7 @@ npm install
 npm run dev
 ```
 
-La aplicación se ejecutará en modo de desarrollo. Abre [http://localhost:3000/portfolio-ts/](http://localhost:3000/portfolio-ts/) en tu navegador para verla.
+La aplicación se ejecutará en modo de desarrollo. Abre [http://localhost:4173/](http://localhost:4173/) en tu navegador para verla.
 
 ### Estructura del Proyecto
 
@@ -61,13 +61,14 @@ La aplicación se ejecutará en modo de desarrollo. Abre [http://localhost:3000/
 
 El archivo `src/App.jsx` utiliza React Router para manejar las rutas de la aplicación. A continuación, se describen las rutas disponibles:
 
-- `/portfolio-ts/`: Página de inicio.
-- `/portfolio-ts/about`: Página "Sobre Mí".
-- `/portfolio-ts/skills`: Página de habilidades.
-- `/portfolio-ts/education`: Página de educación.
-- `/portfolio-ts/experiences`: Página de experiencias.
-- `/portfolio-ts/projects`: Página de proyectos.
-- `/portfolio-ts/contact`: Página de contacto.
+- `/`: Página de inicio.
+- `/about`: Página "Sobre Mí".
+- `/skills`: Página de habilidades.
+- `/education`: Página de educación.
+- `/experiences`: Página de experiencias.
+- `/projects`: Página de proyectos.
+- `/contact`: Página de contacto.
+- `/currículum`: Link a mi currículum en google drive
 
 Puedes personalizar estas rutas según tus necesidades y agregar más rutas según sea necesario.
 
@@ -151,8 +152,6 @@ Si deseas personalizar y adaptar este portafolio para tu propio uso, sigue estos
    - Todos los contenidos de las secciones (Inicio, Sobre Mí, Habilidades, Educación, Experiencias, Proyectos, Contacto) están almacenados en archivos JSON dentro de la carpeta `public/json/`.
 
    - Puedes editar estos archivos JSON (`home.json`, `about.json`, `skills.json`, etc.) para reflejar tus propios datos y detalles.
-
-   -Los archivos en español tienen el nombre base, los archivos en inglés tienen el nombre base seguido de `_en`. Por ejemplo, `home.json` y `home_en.json`.
 
 ### Configuración del sistema de contacto
 
