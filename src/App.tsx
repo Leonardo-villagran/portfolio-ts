@@ -12,7 +12,7 @@ import Contact from './components/Contact';
 
 const App: React.FC = () => {
   return (
-    <Router basename="/portfolio-ts">
+    <Router>
       <Menu />
       <Routes>
         <Route path={`/`} element={<Home />} />

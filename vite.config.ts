@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react-swc'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/portfolio-ts/',
+  base: '/',
   plugins: [react()],
   build: {
     assetsDir: 'assets', // Carpeta de salida para los assets
