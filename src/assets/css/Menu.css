@@ -24,3 +24,10 @@
     color: #fff;
     text-decoration: underline;
 }
+
+.navbar-brand {
+    color: #fff !important;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+}

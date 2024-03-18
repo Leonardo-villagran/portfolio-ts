@@ -1,0 +1,10 @@
+.contact_dark {
+
+    background-color: black !important;
+    color: white !important;
+}
+
+.contact_light {
+    background-color: white !important;
+    color: black !important;
+}

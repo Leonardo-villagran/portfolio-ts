@@ -2,12 +2,17 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import emailjs from '@emailjs/browser';
 import { FormData, FormErrors, ContactData } from '../interfaces/contact.interface';
+import { useAppContext } from '../context/Context';
+import '../assets/css/contact.css';
 
 const serviceId = import.meta.env.VITE_SERVICE_ID;
 const templateId = import.meta.env.VITE_TEMPLATE_ID;
 const userId = import.meta.env.VITE_USER_ID;
 
 const ContactForm: React.FC = () => {
+
+    const { language, theme } = useAppContext();
+
     const [formData, setFormData] = useState<FormData>({
         userName: '',
         email: '',
@@ -26,7 +31,8 @@ const ContactForm: React.FC = () => {
     useEffect(() => {
         const fetchContactData = async () => {
             try {
-                const response = await axios.get<ContactData>('./json/contact.json');
+                const filename = language === 'en' ? 'contact_en' : 'contact';
+                const response = await axios.get<ContactData>(`./json/${filename}.json`);
                 setContactData(response.data);
             } catch (error) {
                 console.error('Error fetching contact data:', error);
@@ -34,7 +40,7 @@ const ContactForm: React.FC = () => {
         };
 
         fetchContactData();
-    }, []);
+    }, [language]);
 
     // Función para manejar cambios en los campos del formulario
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -106,31 +112,36 @@ const ContactForm: React.FC = () => {
         return emailRegex.test(email);
     };
 
+
+    const contactClass = theme === 'dark' ? 'contact_dark vh-100' : 'contact_light vh-100';
+
     return (
-        <div className="container">
-            <h2 className="text-center">{contactData && contactData.title}</h2>
-            <div className="card bg-dark text-white">
-                <div className="card-body">
-                    <form onSubmit={handleSubmit}>
-                        <div className="form-group">
-                            <label htmlFor="userName">{contactData && contactData.name}</label>
-                            <input type="text" className="form-control" id="userName" name="userName" value={formData.userName} onChange={handleChange} />
-                            {submitError && <div className="invalid-feedback">{formErrors.userName}</div>}
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="email">{contactData?.email}</label>
-                            <input type="email" className="form-control" id="email" name="email" value={formData.email} onChange={handleChange} />
-                            {submitError && <div className="invalid-feedback">{formErrors.email}</div>}
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="message">{contactData && contactData.message}</label>
-                            <textarea className="form-control" id="message" name="message" rows={5} value={formData.message} onChange={handleChange} />
-                            {submitError && <div className="invalid-feedback">{formErrors.message}</div>}
-                        </div>
-                        <button type="submit" className="btn btn-primary" disabled={submitting}>{submitting ? (contactData && contactData.sending) : (contactData && contactData.button)}</button>
-                    </form>
-                    {submitSuccess && <div className="alert alert-success">{contactData && contactData.success_message}</div>}
-                    {submitError && <div className="alert alert-danger">{contactData && contactData.danger_message}</div>}
+        <div className={contactClass}>
+            <div className="container">
+                <h2 className="text-center">{contactData && contactData.title}</h2>
+                <div className="card bg-dark text-white">
+                    <div className="card-body">
+                        <form onSubmit={handleSubmit}>
+                            <div className="form-group">
+                                <label htmlFor="userName">{contactData && contactData.name}</label>
+                                <input type="text" className="form-control" id="userName" name="userName" value={formData.userName} onChange={handleChange} />
+                                {submitError && <div className="invalid-feedback">{formErrors.userName}</div>}
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="email">{contactData?.email}</label>
+                                <input type="email" className="form-control" id="email" name="email" value={formData.email} onChange={handleChange} />
+                                {submitError && <div className="invalid-feedback">{formErrors.email}</div>}
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="message">{contactData && contactData.message}</label>
+                                <textarea className="form-control" id="message" name="message" rows={5} value={formData.message} onChange={handleChange} />
+                                {submitError && <div className="invalid-feedback">{formErrors.message}</div>}
+                            </div>
+                            <button type="submit" className="btn btn-primary" disabled={submitting}>{submitting ? (contactData && contactData.sending) : (contactData && contactData.button)}</button>
+                        </form>
+                        {submitSuccess && <div className="alert alert-success">{contactData && contactData.success_message}</div>}
+                        {submitError && <div className="alert alert-danger">{contactData && contactData.danger_message}</div>}
+                    </div>
                 </div>
             </div>
         </div>

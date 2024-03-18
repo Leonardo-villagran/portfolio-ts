@@ -2,7 +2,7 @@
 
 Este es un ejemplo básico de una aplicación de portafolio utilizando React y Typescript para la navegación. La aplicación incluye una barra de navegación, secciones para la página de inicio, sobre mí, habilidades, educación, experiencias, proyectos y contacto. Se pueden personalizar los contenidos de cada sección editando los archivos JSON correspondientes. También se incluye un sistema de contacto que utiliza EmailJS para enviar emails a través de los servicios configurados con las credenciales proporcionadas.
 
-Pueden ver el ejemplo en el siguiente enlace desde GitHub Pages: [https://leonardo-villagran.github.io/portfolio-ts/](https://leonardo-villagran.github.io/portfolio-ts/)
+Pueden ver el ejemplo en el siguiente enlace desde Netlify: [https://leonardo-villagran-portfolio-ts.netlify.app/](https://leonardo-villagran-portfolio-ts.netlify.app)
 
 Pueden ver el ejemplo en el siguiente enlace desde Render.com: [https://portfolio-ts-wkho.onrender.com/](https://portfolio-ts-wkho.onrender.com/)
 
@@ -167,32 +167,33 @@ Para configurar el sistema de contacto, sigue estos pasos:
     VITE_SERVICE_ID=tu_service_ID
     VITE_TEMPLATE_ID=tu_template_ID
     VITE_USER_ID=tu_user_ID
-    VITE_ROOT_URL=portfolio-ts
+
     ```
 
    Asegúrate de reemplazar `'tu_service_ID'`, `'tu_template_ID'` y `'tu_user_ID'` con los valores específicos que obtuviste de EmailJS.
 
 Con estos pasos, habrás configurado correctamente el sistema de contacto en tu aplicación. Este sistema utiliza EmailJS para enviar emails a través de los servicios configurados con las credenciales proporcionadas.
 
-### Cómo subir el portafolio a GitHub Pages
+### Cómo subir el portafolio a Netlify
 
-Para llevar a cabo la publicación de tu portafolio en GitHub Pages, sigue estas indicaciones:
+Para llevar a cabo la publicación de tu portafolio en Netlify, sigue estas indicaciones:
 
-1. Clona o descarga el repositorio desde GitHub.
+1. Subir tu proyecto a GitHub:
+Asegúrate de que tu proyecto se encuentra en un repositorio de GitHub. Si no lo has hecho, inicializa un repositorio git en tu proyecto y súbelo a GitHub.
 
-2. Asegúrate de que el nombre de tu repositorio sea "portfolio-ts", de lo contrario, las rutas no funcionarán correctamente.
+2. Crear un nuevo sitio en Netlify:
+Ve a la página web de Netlify y crea una cuenta si aún no la tienes. Después de iniciar sesión, haz clic en el botón `Add new site`,  luego presiona `Import an existing project` y selecciona `Deploy with Github ` sigue los pasos para conectar tu repositorio de GitHub.
 
-3. En el archivo `package.json`, sustituye mi nombre de usuario de GitHub por el tuyo en la sección `homepage`.
+3. Configurar las variables de entorno en Netlify:
+Una vez que hayas conectado tu repositorio de GitHub, ve a la sección "Site settings" o "Site configuration" en Netlify. Busca la opción para configurar las variables de entorno y agrega las variables VITE_SERVICE_ID, VITE_TEMPLATE_ID y VITE_USER_ID con sus respectivos valores.
 
-4. Para poder usar la sección de contacto a través de GitHub Pages, debes ingresar las variables de entorno al repositorio (`'tu_service_ID'`, `'tu_template_ID'` y `'tu_user_ID'`) a la sección `Settings>Environments>github-pages>` y en la sección `Environment secrets` ingresar cada variable con el contenido asociado a través del botón `Add secret`. 
+Configurar el comando de construcción en Netlify:
+En la misma sección de configuración de Netlify, asegúrate de configurar el comando de construcción de tu proyecto. Para proyectos React Vite, el comando de construcción suele ser npm run build.
 
-4. Una vez que hayas realizado todas las modificaciones necesarias, sube los cambios a GitHub y realiza la implementación con el siguiente comando:
+Despliegue automático desde GitHub:
+Netlify puede configurarse para desplegar automáticamente tu sitio cada vez que hagas un push a tu repositorio de GitHub. Esto se puede configurar desde la sección "Deploys" en Netlify.
 
-```bash
-npm run deploy
-```
-
-Siguiendo estos pasos, podrás desplegar tu portafolio en GitHub Pages de manera efectiva.
+Una vez completados estos pasos, Netlify debería desplegar automáticamente tu aplicación React Vite desde GitHub con las variables de entorno configuradas. Asegúrate de que tu aplicación funciona correctamente después del despliegue.
 
 ### Cómo subir a render.com
 

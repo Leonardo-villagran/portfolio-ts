@@ -1,8 +1,19 @@
-.hero {
+.base {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   height: 100vh; /* Ajusta la altura del hero para que ocupe toda la pantalla */
+}
+
+.hero_dark {
+
+  background-color: black !important;
+  color: white !important;
+}
+
+.hero_light {
+  background-color: white !important;
+  color: black !important;
 }

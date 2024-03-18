@@ -2,14 +2,19 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Chrono } from 'react-chrono';
 import { EducationData } from '../interfaces/experiences.interface';
+import { useAppContext } from '../context/Context';
+import '../assets/css/education.css';
 
 const EducationTimeline: React.FC = () => {
+
+    const { language, theme } = useAppContext();
     const [educationData, setEducationData] = useState<EducationData | null>(null);
 
     useEffect(() => {
         const fetchEducationData = async () => {
             try {
-                const response = await axios.get<EducationData>('./json/education.json');
+                const filename= language === 'en' ? 'education_en' : 'education';
+                const response = await axios.get<EducationData>(`./json/${filename}.json`);
                 setEducationData(response.data);
             } catch (error) {
                 console.error('Error fetching education data:', error);
@@ -17,9 +22,12 @@ const EducationTimeline: React.FC = () => {
         };
 
         fetchEducationData();
-    }, []);
+    }, [language]);
+
+    const educationClass = theme === 'dark' ? 'education_dark' : 'education_light';
 
     return (
+        <div className={educationClass}>
         <div className='container text-center'>
             {educationData && (
                 <div>
@@ -61,6 +69,7 @@ const EducationTimeline: React.FC = () => {
                     </Chrono>
                 </div>
             )}
+        </div>
         </div>
     );
 };
