@@ -168,7 +168,7 @@
                 "Personal portfolio in English and/or Spanish.",
                 "Frontend developed in React-Vite.",
                 "Customizable through JSON files.",
-                "App deployed on Github Pages."
+                "App deployed on Netlify and Render.com."
             ],
             "links": [
                 {
@@ -177,7 +177,7 @@
                 },
                 {
                     "text": "Live",
-                    "href": "https://leonardo-villagran.github.io/portfolio/"
+                    "href": "https://leonardo-villagran-portfolio.netlify.app"
                 }
             ],
             "tags": [
