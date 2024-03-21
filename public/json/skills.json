@@ -17,10 +17,7 @@
                     "icon": "images/skills/php.png",
                     "title": "PHP"
                 },
-                {
-                    "icon": "images/skills/java.png",
-                    "title": "Java"
-                },
+
                 {
                     "icon": "images/skills/mysql.png",
                     "title": "MySQL"
@@ -85,7 +82,11 @@
                 },
                 {
                     "icon": "images/skills/gcp.png",
-                    "title": "GCP"
+                    "title": "Google Cloud Platform"
+                },
+                {
+                    "icon": "images/skills/office.png",
+                    "title": "Microsoft Office"
                 }
             ]
         }

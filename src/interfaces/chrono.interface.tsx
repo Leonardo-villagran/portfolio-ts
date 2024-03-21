@@ -1,9 +1,10 @@
-export interface EducationData {
+export interface ChronoData {
     title: string;
-    content: EducationItem[];
+    content: ChronoItem[];
+    mode: string;
 }
 
-interface EducationItem {
+interface ChronoItem {
     title: string;
     cardTitle: string;
     cardSubtitle: string;

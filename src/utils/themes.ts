@@ -1,4 +1,6 @@
-export const edu_dark ={
+import {Theme} from '../interfaces/theme.interface';
+
+export const themeDark: Theme ={
     primary: '#3d84c6', // Color de fondo de la línea de tiempo y del contenido
     secondary: 'white', // Color del punto de tiempo y de los detalles de la tarjeta
     cardBgColor: '#1b1b1b', // Fondo de la tarjeta
@@ -11,14 +13,14 @@ export const edu_dark ={
 
 }
 
-export const edu_light = {
-    primary: 'white',
+export const themeLight: Theme = {
+    primary: 'black',
     secondary: '#3d84c6',
     cardBgColor: '#f0f0f0',
     titleColor: '#333333',
-    titleColorActive: '#007fff',
+    titleColorActive: 'white',
     cardForeColor: 'black',
     cardSubtitleColor: '#3d84c6',
     cardTitleColor: '#333333',
-    cardDetailsColor: '#808080',
+    cardDetailsColor: '#303030',
 };

@@ -1,53 +1,41 @@
 {
     "title": "Education",
-    "content":[
+    "content": [
         {
             "title": "2022 - 2023",
             "cardTitle": "Full-Stack JavaScript Development",
-            "cardSubtitle":"Desafío Latam",
-            "icon" : {
-                "src": "images/education/desafio_latam.png"
-            }
+            "cardSubtitle": "Desafío Latam",
+            "icon": "images/education/desafio_latam.png"
         },
         {
             "title": "2015 - 2017",
             "cardTitle": "Master's Degree in Education",
-            "cardSubtitle":"Catholic University Silva Henríquez",
-            "icon" : {
-                "src": "images/education/ucsh.png"
-            }
+            "cardSubtitle": "Catholic University Silva Henríquez",
+            "icon": "images/education/ucsh.png"
         },
         {
             "title": "2016",
             "cardTitle": "Diploma in Management and Pedagogical Leadership",
-            "cardSubtitle":"Catholic University Silva Henríquez",
-            "icon" : {
-                "src": "images/education/ucsh.png"
-            }
+            "cardSubtitle": "Catholic University Silva Henríquez",
+            "icon": "images/education/ucsh.png"
         },
         {
             "title": "2015",
             "cardTitle": "Diploma in Educational Research",
-            "cardSubtitle":"Catholic University Silva Henríquez",
-            "icon" : {
-                "src": "images/education/ucsh.png"
-            }
+            "cardSubtitle": "Catholic University Silva Henríquez",
+            "icon": "images/education/ucsh.png"
         },
         {
             "title": "2003 - 2007",
             "cardTitle": "Bachelor's Degree in Computer Science and Management",
-            "cardSubtitle":"Diego Portales University",
-            "icon" : {
-                "src": "images/education/udp.png"
-            }
+            "cardSubtitle": "Diego Portales University",
+            "icon": "images/education/udp.png"
         },
         {
             "title": "2007",
             "cardTitle": "Diploma in Management and Information Technology",
-            "cardSubtitle":"Diego Portales University",
-            "icon" : {
-                "src": "images/education/udp.png"
-            }
+            "cardSubtitle": "Diego Portales University",
+            "icon": "images/education/udp.png"
         }
     ]
 }

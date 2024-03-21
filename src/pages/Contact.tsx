@@ -113,10 +113,10 @@ const ContactForm: React.FC = () => {
     };
 
 
-    const contactClass = theme === 'dark' ? 'contact_dark vh-100' : 'contact_light vh-100';
+    const contactClass = theme === 'dark' ? 'contact_dark ' : 'contact_light';
 
     return (
-        <div className={contactClass}>
+        <div className={`vh-100 ${contactClass}`}>
             <div className="container">
                 <h2 className="text-center">{contactData && contactData.title}</h2>
                 <div className="card bg-dark text-white">

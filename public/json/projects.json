@@ -168,7 +168,7 @@
                 "Portafolio personal en inglés y/o español.",
                 "Frontend desarrollado en React-Vite.",
                 "Permite personalizar a través de archivos json.",
-                "App implementada en Netlify and Render.com."
+                "App implementada en Netlify y Render.com."
             ],
             "links": [
                 {
@@ -184,14 +184,15 @@
                 "React",
                 "Vite",
                 "Json",
-                "Github Pages"
+                "Netlify",
+                "Render"
             ]
         },
         {
             "image": "images/projects/cuidadoras.jpg",
             "title": "Cuidadoras - Web App",
             "bodyText": [
-                "Web sobre cuidadoras de pacientes en sus hogares.",
+                "Web sobre cuidadoras en sus hogares.",
                 "Frontend desarrollado en React.",
                 "Datos obtenidos desde Json|.",
                 "App implementada en Github Pages."
@@ -217,7 +218,7 @@
             "image": "images/projects/pokemon.jpg",
             "title": "Frontend PokeApi - Web App",
             "bodyText": [
-                "Web que obtiene pokemones desde un listado web.",
+                "Web que obtiene pokemones desde una API.",
                 "Frontend desarrollado en React.",
                 "Datos obtenidos desde la PokeApi.",
                 "App implementada en Github Pages."

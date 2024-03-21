@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { SocialIcon } from 'react-social-icons';
-import Typewriter from 'typewriter-effect';
 import { Data } from '../interfaces/home.interfaces';
 import '../assets/css/Home.css';
-import { useAppContext } from '../context/Context'; // Importa el hook useAppContext desde el archivo Context.tsx
+import { useAppContext } from '../context/Context'; // Importa el hook useAppContext desde el archivo Context.tsx// Importa el 
+import SocialIcons from '../components/SocialIcons';
+import Typewriters from '../components/Typewriters';
+
 
 const Home: React.FC = () => {
     const { language, theme } = useAppContext();
@@ -27,25 +28,15 @@ const Home: React.FC = () => {
     // Agrega una clase al contenedor principal del hero según el tema seleccionado
     const heroClass = theme === 'dark' ? 'hero_dark' : 'hero_light';
 
-    
     return (
         <div className={`base ${heroClass}`}>
             {data && (
                 <div>
-                    <h1>{data.name}</h1>
-                        <Typewriter
-                            options={{
-                                strings: data.roles,
-                                autoStart: true,
-                                loop: true,
-                                delay: 30, 
-                                deleteSpeed: 20
-                            }}
-                        />
+                    <Typewriters name={data?.name} strings={data?.roles} />
                     <div>
-                        <SocialIcon url={data.linkedin} style={{ height: 50, width: 50 }} />
-                        <SocialIcon url={data.github} style={{ height: 50, width: 50 }} />
-                        <SocialIcon url={`mailto:${data.email}`} style={{ height: 50, width: 50 }} />
+                        <SocialIcons link={data.linkedin} />
+                        <SocialIcons link={data.github} />
+                        <SocialIcons link={`mailto:${data.email}`}/>
                     </div>
                 </div>
             )}

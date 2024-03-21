@@ -31,12 +31,12 @@ const Skills: React.FC = () => {
             <div className='container text-center'>
                 {techStackData && (
                     <div>
-                        <h2 >{techStackData.title}</h2>
-                        <p >{techStackData.intro}</p>
+                        <h2 className='p-2'>{techStackData.title}</h2>
+                        <p className='p-2'>{techStackData.intro}</p>
                         {techStackData.skills.map((category, index) => (
                             <div key={index}>
-                                <h3 >{category.title}</h3>
-                                <div className="row justify-content-center">
+                                <h3 className='p-2' >{category.title}</h3>
+                                <div className="row justify-content-center pt-4">
                                     {category.items.map((item, itemIndex) => (
                                         <div key={itemIndex} className="col-md-3 col-lg-2 mb-4">
                                             <div className={cardColor}>

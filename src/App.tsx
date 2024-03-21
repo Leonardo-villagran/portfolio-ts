@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Menu from './components/Menu';
-import Home from './components/Home';
-import About from './components/About';
-import Skills from './components/Skills';
-import Education from './components/Education';
-import Experiences from './components/Experiences';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import Home from './pages/Home';
+import About from './pages/About';
+import Skills from './pages/Skills';
+import Education from './pages/Education';
+import Experiences from './pages/Experiences';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
 // Importamos el AppProvider
 import { AppProvider } from './context/AppProvider'; 
 

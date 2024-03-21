@@ -1,8 +1,8 @@
 export interface AboutData {
     title: string;
-    title_card: string;
+    about_card: string;
     about: string;
-    image: string;
+    about_picture: string;
     family_card: string;
     family: string;
     family_picture: string;

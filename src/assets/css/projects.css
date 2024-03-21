@@ -6,4 +6,15 @@
 .projects_light {
     background-color: white !important;
     color: black !important;
+    
+}
+
+.custom-rounded-bottom {
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.card-footer {
+    border-top: none;
+    /* Eliminar la línea divisoria superior */
 }

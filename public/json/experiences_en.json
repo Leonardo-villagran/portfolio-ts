@@ -9,9 +9,7 @@
                 "Developing Full-Stack web systems."
             ],
             "title": "2022 - Present",
-            "icon" : {
-                "src": "images/experiences/biotik.png"
-            }
+            "icon": "images/experiences/biotik.png"
         },
         {
             "cardTitle": "Head Teacher of Programming and Educational Management Support",
@@ -22,9 +20,7 @@
                 "Collaborating with various departments for proper use of computer tools."
             ],
             "title": "2016 - 2022",
-            "icon" : {
-                "src": "images/experiences/b72.png"
-            }
+            "icon": "images/experiences/b72.png"
         },
         {
             "cardTitle": "Statistical Analyst and IT Project Management",
@@ -34,9 +30,7 @@
                 "Processing, analyzing, and validating data for report generation."
             ],
             "title": "2013 - 2015",
-            "icon" : {
-                "src": "images/experiences/indisa.png"
-            }
+            "icon": "images/experiences/indisa.png"
         },
         {
             "cardTitle": "Educational and IT Management Consultant",
@@ -46,9 +40,7 @@
                 "Curriculum coverage improvement and SIMCE"
             ],
             "title": "2008 - 2013",
-            "icon" : {
-                "src": "images/experiences/itnline.png"
-            }
+            "icon": "images/experiences/itnline.png"
         }
     ]
 }

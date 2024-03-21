@@ -1,8 +1,8 @@
 {
     "title": "About Me",
-    "title_card": "Who am I?",
+    "about_card": "Who am I?",
     "about": "Computer and Management Engineer with over 15 years of experience in the areas of software development and computer education. I have implemented and managed various web systems to support institutional management and tools for data control. Additionally, I have worked as a computer teacher, teaching programming and databases according to the Ministry of Education requirements. I am a goal-oriented professional with the ability to work in teams, committed to continuous learning and ongoing knowledge updates. Currently, I am seeking new professional challenges that allow me to continue developing in the field of computer management.",
-    "image": "images/about/profile.jpg",
+    "about_picture": "images/about/profile.jpg",
     "family_card": "My Family",
     "family": "My greatest motivation in life is undoubtedly my family, composed of my wife and daughter. Every step I take and every decision I make aims primarily to provide them with a better future. The simple idea of contributing to their well-being and happiness drives my daily actions. I enjoy every moment I share with them, as each laugh, each challenge overcome together, becomes fundamental pieces of our bond. Watching my daughter grow is a privilege that I greatly value. Her development serves as a constant source of joy and motivation for me to keep striving.",
     "family_picture": "images/about/family.jpg",
