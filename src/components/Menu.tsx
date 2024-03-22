@@ -13,9 +13,6 @@ const Menu: React.FC = () => {
     const [menuOpen, setMenuOpen] = useState<boolean>(false);
     const [showMenu, setShowMenu] = useState<boolean>(false);
     
-
-
-   
     useEffect(() => {
         const fetchMenuData = async () => {
             try {
