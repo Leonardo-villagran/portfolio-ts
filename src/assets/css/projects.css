@@ -1,12 +1,82 @@
+/* https: //www.gradient-animator.com */
 .projects_dark {
-    background-color: black !important;
-    color: white !important;
+    /* background-color: black !important;*/
+    background: linear-gradient(270deg, #022642, #000000);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 16s ease infinite;
+    -moz-animation: AnimationName 16s ease infinite;
+    -o-animation: AnimationName 16s ease infinite;
+    animation: AnimationName 16s ease infinite;
+    color: white;
 }
 
 .projects_light {
-    background-color: white !important;
+    /*background-color: white !important;*/
+    background: linear-gradient(270deg, #b0b0b0, #ffffff);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 16s ease infinite;
+    -moz-animation: AnimationName 16s ease infinite;
+    -o-animation: AnimationName 16s ease infinite;
+    animation: AnimationName 16s ease infinite;
     color: black !important;
-    
+}
+
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 47%
+    }
+
+    50% {
+        background-position: 100% 54%
+    }
+
+    100% {
+        background-position: 0% 47%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 47%
+    }
+
+    50% {
+        background-position: 100% 54%
+    }
+
+    100% {
+        background-position: 0% 47%
+    }
+}
+
+@-o-keyframes AnimationName {
+    0% {
+        background-position: 0% 47%
+    }
+
+    50% {
+        background-position: 100% 54%
+    }
+
+    100% {
+        background-position: 0% 47%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 47%
+    }
+
+    50% {
+        background-position: 100% 54%
+    }
+
+    100% {
+        background-position: 0% 47%
+    }
 }
 
 .custom-rounded-bottom {
@@ -18,3 +88,4 @@
     border-top: none;
     /* Eliminar la línea divisoria superior */
 }
+

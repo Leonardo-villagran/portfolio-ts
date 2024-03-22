@@ -51,10 +51,22 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     
         getAppConfig();
     }, []);
+
+    // const getBackgroundImage = (currentTheme: string) => {
+    //     return currentTheme === 'dark' ? 'images/fondo_dark.jpg' : 'images/fondo_light.jpg';
+    // };
+
+    // const backgroundImage = getBackgroundImage(theme);
     
     return (
         <AppContext.Provider value={{ language, setLanguage, theme, setTheme }}>
+            {/* <div style={{ 
+                backgroundImage: `url('${backgroundImage}')`, 
+                backgroundSize: '100% 100%', 
+                backgroundRepeat: 'repeat' }}> */}
+            <div>
             {children}
+            </div>
         </AppContext.Provider>
     );
 };

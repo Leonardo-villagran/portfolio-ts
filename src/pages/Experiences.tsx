@@ -24,7 +24,7 @@ const EducationTimeline: React.FC = () => {
         fetchEducationData();
     }, [language]);
 
-    const educationClass = theme === 'dark' ? 'education_dark' : 'education_light';
+    const educationClass = theme === 'dark' ? 'experiences_dark' : 'experiences_light';
 
     const ChronoComponent = theme === 'dark' ? ChronoDark : ChronoLight;
 

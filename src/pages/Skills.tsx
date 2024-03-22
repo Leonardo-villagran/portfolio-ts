@@ -24,7 +24,9 @@ const Skills: React.FC = () => {
 
     // Agrega una clase al contenedor principal del hero según el tema seleccionado
     const skillClass = theme === 'dark' ? 'skill_dark' : 'skill_light';
-    const cardColor = theme === 'dark' ? 'card text-center bg bg-black text-white border-0' : 'card text-center bg bg-white text-black border-0';
+    const cardColor = theme === 'dark' ?
+        'card text-center bg-transparent text-white border-0 ' :
+        'card text-center bg-transparent text-dark border-0 ';
 
     return (
         <div className={skillClass}>
