@@ -1,14 +1,14 @@
 /* https: //www.gradient-animator.com */
 .contact_dark {
     /* background-color: black !important;*/
-    background: linear-gradient(270deg, #022642, #000000);
-    background-size: 400% 400%;
-
-    -webkit-animation: AnimationName 16s ease infinite;
-    -moz-animation: AnimationName 16s ease infinite;
-    -o-animation: AnimationName 16s ease infinite;
-    animation: AnimationName 16s ease infinite;
-    color: white;
+        background: linear-gradient(270deg, #022947, #000000);
+        background-size: 400% 400%;
+    
+        -webkit-animation: AnimationName 16s ease infinite;
+        -moz-animation: AnimationName 16s ease infinite;
+        -o-animation: AnimationName 16s ease infinite;
+        animation: AnimationName 16s ease infinite;
+        color: white !important;
 }
 
 .contact_light {

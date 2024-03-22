@@ -12,7 +12,7 @@
 /* https: //www.gradient-animator.com */
 .hero_dark {
     /* background-color: black !important;*/
-    background: linear-gradient(270deg, #022642, #000000);
+    background: linear-gradient(270deg, #022947, #000000);
       background-size: 400% 400%;
     
       -webkit-animation: AnimationName 16s ease infinite;
