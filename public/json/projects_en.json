@@ -166,22 +166,23 @@
             "title": "Portfolio - Web App",
             "bodyText": [
                 "Personal portfolio in English and/or Spanish.",
-                "Frontend developed in React-Vite.",
+                "Frontend developed in React-Vite and TypeScript.",
                 "Customizable through JSON files.",
                 "App deployed on Netlify and Render.com."
             ],
             "links": [
                 {
                     "text": "GitHub",
-                    "href": "https://github.com/Leonardo-villagran/portfolio"
+                    "href": "https://github.com/Leonardo-villagran/portfolio-ts"
                 },
                 {
                     "text": "Live",
-                    "href": "https://leonardo-villagran-portfolio.netlify.app"
+                    "href": "https://leonardo-villagran-portfolio-ts.netlify.app"
                 }
             ],
             "tags": [
                 "React",
+                "TypeScript",
                 "Vite",
                 "Json",
                 "Netlify",
