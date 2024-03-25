@@ -280,6 +280,26 @@
                 "MongoDB", 
                 "VS Code"
             ]
+        },{
+            "image": "images/projects/mysql.jpg",
+            "title": "Mysql desde Docker",
+            "bodyText": [
+                "Docker Compose de Mysql.",
+                "Permite ejecutar un servidor de Mysql.",
+                "Se puede personalizar la configuración desde docker-compose.yml y las variables de entorno."
+            ],
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/mysql"
+                }
+            ],
+            "tags": [
+                "Docker",
+                "Docker Compose",
+                "Mysql",
+                "VS Code"
+            ]
         }
     ]
 }
