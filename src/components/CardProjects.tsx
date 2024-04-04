@@ -31,7 +31,7 @@ const CardProjects: React.FC<CardProjectsProps> = (props: CardProjectsProps) => 
                             </div>
                             <div className={`card-footer text-center ${cardItems.cardFooter}`}>
                                 {project.tags.map((tag, idx) => (
-                                    <span key={idx} className="badge badge-dark btn btn-dark me-2 mb-2">{tag}</span>
+                                    <span key={idx} className={`${cardItems.cardBadge} me-2 mb-2`}>{tag}</span>
                                 ))}
                             </div>
                         </div>

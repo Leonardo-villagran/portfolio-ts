@@ -1,33 +1,12 @@
-.navbar {
-    background-color: #333;
-    padding: 10px 20px;
+.navbar-active {
+    /* Cambiar color de fondo cuando el menú está activo */
+    color: white;
+    /* Cambiar color de texto cuando el menú está activo */
+    /* Otros estilos */
 }
 
-.nav-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-item {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.nav-item a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.nav-item a:hover {
-    color: #fff;
-    text-decoration: underline;
-}
-
-.navbar-brand {
-    color: #fff !important;
-    font-size: 1.5em;
-    font-weight: bold;
-    text-decoration: none;
+.resume-link {
+    color: #9b9d9e !important;
+    /* Mantener el color original del enlace */
+    /* Otros estilos si es necesario */
 }

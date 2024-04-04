@@ -21,6 +21,7 @@ export interface CardItems {
     cardBody: string;
     cardLink: string;
     cardFooter: string;
+    cardBadge: string;
 }
 
 export interface CardProjectsProps {

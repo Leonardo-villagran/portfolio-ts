@@ -1,16 +1,12 @@
 import React from 'react'
+import { AboutDataProps } from '../interfaces/about.interface';
 
-interface AboutDataProps {
-    card: string;
-    picture: string;
-    text: string;
-    color: string;
-}
 
 const AboutComponent: React.FC<AboutDataProps> = (props: AboutDataProps) => {
     const { card, picture, text, color } = props;
 
     return (
+
         <div className="col-12 col-md-6 mb-4">
             <div className={`card d-flex flex-column h-100 ${color}`}>
                 <div className="card-body text-center">

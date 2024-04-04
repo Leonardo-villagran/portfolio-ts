@@ -28,15 +28,17 @@ const Projects: React.FC = () => {
     const projectClass = theme === 'dark' ? 'projects_dark' : 'projects_light';
 
     const card = theme === 'dark' ? 'bg-dark border border-white' : 'bg-light border border-black ';
-    const cardBody = theme === 'dark' ? 'bg-black text-white' : 'bg-white text-black';
-    const cardLink = theme === 'dark' ? ' btn-black text-white  border-white' : 'btn-white text-black border-black';
-    const cardFooter = theme === 'dark' ? 'bg-black text-white' : 'bg-white text-black';
+    const cardBody = theme === 'dark' ? 'bg-dark text-white' : 'bg-white text-black';
+    const cardLink = theme === 'dark' ? ' btn-dark text-white  border-white' : 'btn-white text-black border-black';
+    const cardFooter = theme === 'dark' ? 'bg-dark text-white' : 'bg-white text-black';
+    const cardBadge = theme === 'dark' ? 'badge btn btn-light text-dark' : 'badge btn btn-dark text-white';
 
     const cardItems: CardItems={
         card,
         cardBody,
         cardLink,
         cardFooter,
+        cardBadge,
     };
 
     return (

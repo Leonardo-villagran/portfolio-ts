@@ -35,7 +35,7 @@
             "bodyText": [
                 "Sistema de gestión de usuarios y proyectos.",
                 "Visualización de proceso de proyectos a través de websockets.",
-                "Visualización de informes y mapas"
+                "Visualización de informes y mapas."
             ],
             "links": [
                 {
@@ -193,9 +193,10 @@
             "image": "images/projects/cuidadoras.jpg",
             "title": "Cuidadoras - Web App",
             "bodyText": [
-                "Web sobre cuidadoras en sus hogares.",
+                "Web sobre cuidadoras en hogares particulares.",
                 "Frontend desarrollado en React.",
-                "Datos obtenidos desde Json|.",
+                "Desarrollada con TypeScript.",
+                "Datos obtenidos desde Json.",
                 "App implementada en Github Pages."
             ],
             "links": [

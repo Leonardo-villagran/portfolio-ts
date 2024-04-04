@@ -4,7 +4,8 @@ import axios from 'axios';
 import { MenuItem } from '../interfaces/menu.interface';
 import '../assets/css/Menu.css';
 import { useAppContext } from '../context/Context';
-import {Form} from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Form} from 'react-bootstrap';
+import HomeIcon from '@mui/icons-material/Home';
 
 const Menu: React.FC = () => {
     const { language, setLanguage, theme, setTheme } = useAppContext();
@@ -12,7 +13,9 @@ const Menu: React.FC = () => {
     const [menuData, setMenuData] = useState<MenuItem | null>(null);
     const [menuOpen, setMenuOpen] = useState<boolean>(false);
     const [showMenu, setShowMenu] = useState<boolean>(false);
-    
+    const [isActive, setIsActive] = useState<boolean>(false); // Estado para el menú activo
+
+
     useEffect(() => {
         const fetchMenuData = async () => {
             try {
@@ -49,10 +52,24 @@ const Menu: React.FC = () => {
     }, []);
 
 
+    useEffect(() => {
+        console.log('Menu open:', menuOpen);
+    }, [menuOpen]);
+
+    useEffect(() => {
+        console.log('Menu active:', isActive);
+    }, [isActive]);
+
 
     const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
+        setMenuOpen(prevMenuOpen => {
+            const newMenuOpen = !prevMenuOpen;
+            setIsActive(!newMenuOpen); // Cambiar estado del menú activo
+            return newMenuOpen;
+        });
+
     };
+
 
     const toggleDropdown = () => {
         setDropdownOpen(!dropdownOpen);
@@ -69,69 +86,64 @@ const Menu: React.FC = () => {
         setTheme(newTheme);
         localStorage.setItem('theme', newTheme); // Actualiza el tema en el localStorage
     };
-    
+
     if (!menuData) {
         return <div>Loading...</div>;
     }
-    console.log('theme:', theme);
-    console.log('stored theme:', localStorage.getItem('theme'));
 
     return (
+        <div className="sticky-top">
+            <Navbar expand="lg" variant="dark" bg="black" className={isActive ? "navbar-active" : ""} style={{ fontWeight: 'bold' }}>
 
-        <nav className="navbar navbar-expand-lg">
-            <div className="container-fluid">
-                <Link className="navbar-brand"to="/">Home</Link>
-                <button className="navbar-toggler" type="button" onClick={toggleMenu} aria-expanded={menuOpen ? 'true' : 'false'}>
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className={`collapse navbar-collapse ${menuOpen ? 'show' : ''}`} id="navbarNav">
-                    <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <Link to={`/about`}>{menuData.about}</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to={`/skills`}>{menuData.skills}</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to={`/education`}>{menuData.education}</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to={`/experiences`}>{menuData.experiences}</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to={`/projects`}>{menuData.projects}</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to={`/contact`}>{menuData.contact}</Link>
-                        </li>
-                        <li className="nav-item">
-                            <a target="_blank" rel="noopener noreferrer" href={menuData.resume.link}>{menuData.resume.title}</a>
-                        </li>
-                        <li className="nav-item">
+            <Navbar.Brand as={Link} to="/">
+                <HomeIcon fontSize="large" />
+            </Navbar.Brand>
+            <Navbar.Toggle className="me-1" onClick={toggleMenu} aria-expanded={menuOpen ? 'true' : 'false'} />
+            <Navbar.Collapse id="navbarNav" className={`navbar-collapse ${menuOpen ? 'show' : ''}`}>
+                <Nav className="me-auto ps-1">
+                    <Nav.Link as={Link} to="/about">{menuData.about}</Nav.Link>
+                    <Nav.Link as={Link} to="/skills">{menuData.skills}</Nav.Link>
+                    <Nav.Link as={Link} to="/education">{menuData.education}</Nav.Link>
+                    <Nav.Link as={Link} to="/experiences">{menuData.experiences}</Nav.Link>
+                    <Nav.Link as={Link} to="/projects">{menuData.projects}</Nav.Link>
+                    <Nav.Link as={Link} to="/contact">{menuData.contact}</Nav.Link>
+                    <Nav.Link
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={menuData.resume.link}
+                        className="resume-link" // Agregar una clase específica al enlace del currículum
+                    >
+                        {menuData.resume.title}
+                    </Nav.Link>
+                </Nav>
+                <Nav>
+                    <Nav.Item>
                         <Form.Check
                             type="switch"
                             id="mySwitch"
-                            checked={theme === "dark"} // Establece el estado del switch según el tema actual
-                            onChange={handleToggleTheme} // Manejador para cambiar el tema cuando se activa el switch
-                            className="ms-4 mt-2" // Agrega una clase personalizada al switch
+                            label=""
+                            checked={theme === "dark"}
+                            onChange={handleToggleTheme}
+                            className="ms-4 mt-2"
                         />
-                        </li>
-                    </ul>
+                    </Nav.Item>
                     {showMenu &&
-                        <div className="ml-auto">
-                            <button className="btn btn-secondary dropdown-toggle" type="button" onClick={toggleDropdown} aria-expanded={dropdownOpen ? 'true' : 'false'}>
-                                {language === 'es' ? 'Español' : 'English'}
-                            </button>
-                            <ul className={`dropdown-menu dropdown-menu-end ${dropdownOpen ? 'show' : ''}`} aria-labelledby="dropdownMenuButton">
-                                <li><button className="dropdown-item" onClick={() => handleLanguageChange('es')}>Español</button></li>
-                                <li><button className="dropdown-item" onClick={() => handleLanguageChange('en')}>English</button></li>
-                            </ul>
-
-                        </div>}
-                </div>
-            </div>
-        </nav>
-
+                        <NavDropdown
+                            title={language === 'es' ? 'Español' : 'English'}
+                            id="basic-nav-dropdown"
+                            align="end"
+                            show={dropdownOpen}
+                            onToggle={toggleDropdown}
+                            
+                        >
+                            <NavDropdown.Item onClick={() => handleLanguageChange('es')} >Español</NavDropdown.Item>
+                            <NavDropdown.Item onClick={() => handleLanguageChange('en')}>English</NavDropdown.Item>
+                        </NavDropdown>
+                    }
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
+        </div>
     );
 };
 

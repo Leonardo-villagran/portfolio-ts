@@ -13,3 +13,10 @@ export interface AboutData {
     hobbie: string;
     hobbie_picture: string;
 }
+
+export interface AboutDataProps {
+    card: string;
+    picture: string;
+    text: string;
+    color: string;
+}
