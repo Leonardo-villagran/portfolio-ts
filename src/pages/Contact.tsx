@@ -87,8 +87,8 @@ const ContactForm: React.FC = () => {
 
         // Envío del formulario con emailjs
         emailjs.send(serviceId, templateId, {
-            from_name: formData.userName,
-            reply_to: formData.email,
+            user_name: formData.userName,
+            user_email: formData.email,
             message: formData.message,
         }, userId)
             .then((response: unknown) => {

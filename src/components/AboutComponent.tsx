@@ -5,6 +5,7 @@ import { AboutDataProps } from '../interfaces/about.interface';
 const AboutComponent: React.FC<AboutDataProps> = (props: AboutDataProps) => {
     const { card, picture, text, color } = props;
 
+    
     return (
 
         <div className="col-12 col-md-6 mb-4">
