@@ -8,19 +8,21 @@ interface TypewriterProps {
 const Typewriters: React.FC<TypewriterProps> = (props: TypewriterProps) => {
     const { name, strings } = props;
     return (
-        <>
-            <h1>{name}</h1>
-            <Typewriter
-                options={{
-                    strings: strings,
-                    autoStart: true,
-                    loop: true,
-                    delay: 30,
-                    deleteSpeed: 20
-                }}
-            />
-        </>
-    )
-}
+        <div className="hero-typewriter">
+            <h1 className="hero-name">{name}</h1>
+            <div className="hero-roles">
+                <Typewriter
+                    options={{
+                        strings: strings,
+                        autoStart: true,
+                        loop: true,
+                        delay: 35,
+                        deleteSpeed: 22,
+                    }}
+                />
+            </div>
+        </div>
+    );
+};
 
 export default Typewriters;

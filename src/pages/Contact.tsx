@@ -10,7 +10,6 @@ const templateId = import.meta.env.VITE_TEMPLATE_ID;
 const userId = import.meta.env.VITE_USER_ID;
 
 const ContactForm: React.FC = () => {
-
     const { language, theme } = useAppContext();
 
     const [formData, setFormData] = useState<FormData>({
@@ -42,7 +41,6 @@ const ContactForm: React.FC = () => {
         fetchContactData();
     }, [language]);
 
-    // Función para manejar cambios en los campos del formulario
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData({
@@ -55,12 +53,10 @@ const ContactForm: React.FC = () => {
         });
     };
 
-    // Función para manejar el envío del formulario
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         setSubmitting(true);
 
-        // Validación del formulario
         const errors: FormErrors = { userName: '', email: '', message: '' };
 
         if (!formData.userName) {
@@ -77,15 +73,13 @@ const ContactForm: React.FC = () => {
 
         setFormErrors(errors);
 
-        // Si hay errores, detener el envío del formulario
         if (Object.values(errors).some(error => error !== '')) {
             setSubmitting(false);
             setSubmitError(true);
-            setSubmitSuccess(false); // Borrar mensaje de éxito si existe
+            setSubmitSuccess(false);
             return;
         }
 
-        // Envío del formulario con emailjs
         emailjs.send(serviceId, templateId, {
             user_name: formData.userName,
             user_email: formData.email,
@@ -94,54 +88,56 @@ const ContactForm: React.FC = () => {
             .then((response: unknown) => {
                 setSubmitting(false);
                 setSubmitSuccess(true);
-                setFormErrors({ userName: '', email: '', message: '' }); // Restablecer errores
-                setSubmitError(false); // Borrar mensaje de error si existe
+                setFormErrors({ userName: '', email: '', message: '' });
+                setSubmitError(false);
+                setFormData({ userName: '', email: '', message: '' });
                 console.log('Email sent:', response);
             })
             .catch((error: Error) => {
                 setSubmitting(false);
                 setSubmitError(true);
-                setSubmitSuccess(false); // Borrar mensaje de éxito si existe
+                setSubmitSuccess(false);
                 console.error('Error sending email:', error);
             });
     };
 
-    // Función para validar el formato del correo electrónico
     const isValidEmail = (email: string) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     };
 
-
-    const contactClass = theme === 'dark' ? 'contact_dark ' : 'contact_light';
+    const contactClass = theme === 'dark' ? 'contact_dark section-shell theme-dark' : 'contact_light section-shell theme-light';
 
     return (
-        <div className={`vh-100 ${contactClass}`}>
-            <div className="container">
-                <h2 className="text-center">{contactData && contactData.title}</h2>
-                <div className="card bg-dark text-white">
-                    <div className="card-body">
-                        <form onSubmit={handleSubmit}>
-                            <div className="form-group">
-                                <label htmlFor="userName">{contactData && contactData.name}</label>
-                                <input type="text" className="form-control" id="userName" name="userName" value={formData.userName} onChange={handleChange} />
-                                {submitError && <div className="invalid-feedback">{formErrors.userName}</div>}
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="email">{contactData?.email}</label>
-                                <input type="email" className="form-control" id="email" name="email" value={formData.email} onChange={handleChange} />
-                                {submitError && <div className="invalid-feedback">{formErrors.email}</div>}
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="message">{contactData && contactData.message}</label>
-                                <textarea className="form-control" id="message" name="message" rows={5} value={formData.message} onChange={handleChange} />
-                                {submitError && <div className="invalid-feedback">{formErrors.message}</div>}
-                            </div>
-                            <button type="submit" className="btn btn-primary" disabled={submitting}>{submitting ? (contactData && contactData.sending) : (contactData && contactData.button)}</button>
-                        </form>
-                        {submitSuccess && <div className="alert alert-success">{contactData && contactData.success_message}</div>}
-                        {submitError && <div className="alert alert-danger">{contactData && contactData.danger_message}</div>}
-                    </div>
+        <div className={contactClass}>
+            <div className="container" style={{ maxWidth: 'var(--max-w)' }}>
+                <div className="text-center">
+                    <span className="section-kicker reveal">Contact</span>
+                    <h2 className="section-title reveal reveal-1">{contactData && contactData.title}</h2>
+                </div>
+                <div className="contact-card mt-4 reveal reveal-2">
+                    <form onSubmit={handleSubmit} noValidate>
+                        <div className="form-group">
+                            <label htmlFor="userName">{contactData && contactData.name}</label>
+                            <input type="text" className="form-control" id="userName" name="userName" value={formData.userName} onChange={handleChange} placeholder={contactData?.name ?? ''} />
+                            {formErrors.userName && <div className="text-danger small mt-1">{formErrors.userName}</div>}
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="email">{contactData?.email}</label>
+                            <input type="email" className="form-control" id="email" name="email" value={formData.email} onChange={handleChange} placeholder="you@email.com" />
+                            {formErrors.email && <div className="text-danger small mt-1">{formErrors.email}</div>}
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="message">{contactData && contactData.message}</label>
+                            <textarea className="form-control" id="message" name="message" rows={5} value={formData.message} onChange={handleChange} />
+                            {formErrors.message && <div className="text-danger small mt-1">{formErrors.message}</div>}
+                        </div>
+                        <button type="submit" className="btn-gradient contact-submit" disabled={submitting}>
+                            {submitting ? (contactData && contactData.sending) : (contactData && contactData.button)}
+                        </button>
+                    </form>
+                    {submitSuccess && <div className="alert alert-success mt-3 mb-0">{contactData && contactData.success_message}</div>}
+                    {submitError && <div className="alert alert-danger mt-3 mb-0">{contactData && contactData.danger_message}</div>}
                 </div>
             </div>
         </div>

@@ -24,14 +24,18 @@ const EducationTimeline: React.FC = () => {
         fetchEducationData();
     }, [language]);
 
-    const educationClass = theme === 'dark' ? 'experiences_dark' : 'experiences_light';
-
+    const educationClass = theme === 'dark' ? 'experiences_dark section-shell theme-dark' : 'experiences_light section-shell theme-light';
     const ChronoComponent = theme === 'dark' ? ChronoDark : ChronoLight;
 
     return (
         <div className={educationClass}>
-            <div className='container text-center'>
-                {educationData && <ChronoComponent title={educationData.title} content={educationData.content} mode="VERTICAL" />}
+            <div className="container" style={{ maxWidth: 'var(--max-w)' }}>
+                <div className="text-center">
+                    <span className="section-kicker reveal">Career</span>
+                </div>
+                <div className="timeline-shell px-2 px-md-4">
+                    {educationData && <ChronoComponent title={educationData.title} content={educationData.content} mode="VERTICAL" />}
+                </div>
             </div>
         </div>
     );

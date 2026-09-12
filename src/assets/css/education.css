@@ -1,80 +1,48 @@
-/* https: //www.gradient-animator.com */
-.education_dark {
-    /* background-color: black !important;*/
-        background: linear-gradient(270deg, #022947, #000000);
-        background-size: 400% 400%;
-    
-        -webkit-animation: AnimationName 16s ease infinite;
-        -moz-animation: AnimationName 16s ease infinite;
-        -o-animation: AnimationName 16s ease infinite;
-        animation: AnimationName 16s ease infinite;
-        color: white !important;
+/* ===== Education & Experiences (timeline) ===== */
+.education_dark,
+.education_light,
+.experiences_dark,
+.experiences_light {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
 }
 
-.education_light {
-    /*background-color: white !important;*/
-    background: linear-gradient(270deg, #b0b0b0, #ffffff);
-    background-size: 400% 400%;
-
-    -webkit-animation: AnimationName 16s ease infinite;
-    -moz-animation: AnimationName 16s ease infinite;
-    -o-animation: AnimationName 16s ease infinite;
-    animation: AnimationName 16s ease infinite;
-    color: black !important;
+.education_dark,
+.experiences_dark {
+  background: radial-gradient(ellipse 70% 50% at 50% 0%, #101a3a 0%, #05070f 62%) !important;
+  color: #eef2ff !important;
 }
 
-@-webkit-keyframes AnimationName {
-    0% {
-        background-position: 0% 47%
-    }
-
-    50% {
-        background-position: 100% 54%
-    }
-
-    100% {
-        background-position: 0% 47%
-    }
+.education_light,
+.experiences_light {
+  background: radial-gradient(ellipse 70% 50% at 50% 0%, #dbeafe 0%, #f6f7fb 62%) !important;
+  color: #0b1020 !important;
 }
 
-@-moz-keyframes AnimationName {
-    0% {
-        background-position: 0% 47%
-    }
-
-    50% {
-        background-position: 100% 54%
-    }
-
-    100% {
-        background-position: 0% 47%
-    }
+.timeline-shell {
+  border-radius: 24px;
+  padding: 1.5rem 0.5rem;
 }
 
-@-o-keyframes AnimationName {
-    0% {
-        background-position: 0% 47%
-    }
-
-    50% {
-        background-position: 100% 54%
-    }
-
-    100% {
-        background-position: 0% 47%
-    }
+.education_dark .timeline-shell,
+.experiences_dark .timeline-shell {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-@keyframes AnimationName {
-    0% {
-        background-position: 0% 47%
-    }
+.education_light .timeline-shell,
+.experiences_light .timeline-shell {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(11, 16, 32, 0.08);
+  box-shadow: 0 16px 40px rgba(11, 16, 32, 0.08);
+}
 
-    50% {
-        background-position: 100% 54%
-    }
-
-    100% {
-        background-position: 0% 47%
-    }
+.chrono-icons img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 4px;
 }

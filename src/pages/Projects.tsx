@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { ProjectsData, CardItems } from '../interfaces/projects.interface';
+import { ProjectsData } from '../interfaces/projects.interface';
 import { useAppContext } from '../context/Context';
 import '../assets/css/projects.css';
 
 import CardProjects from '../components/CardProjects';
-
 
 const Projects: React.FC = () => {
     const { language, theme } = useAppContext();
@@ -25,27 +24,13 @@ const Projects: React.FC = () => {
         fetchProjectsData();
     }, [language]);
 
-    const projectClass = theme === 'dark' ? 'projects_dark' : 'projects_light';
-
-    const card = theme === 'dark' ? 'bg-dark border border-white' : 'bg-light border border-black ';
-    const cardBody = theme === 'dark' ? 'bg-dark text-white' : 'bg-white text-black';
-    const cardLink = theme === 'dark' ? ' btn-dark text-white  border-white' : 'btn-white text-black border-black';
-    const cardFooter = theme === 'dark' ? 'bg-dark text-white' : 'bg-white text-black';
-    const cardBadge = theme === 'dark' ? 'badge btn btn-light text-dark' : 'badge btn btn-dark text-white';
-
-    const cardItems: CardItems={
-        card,
-        cardBody,
-        cardLink,
-        cardFooter,
-        cardBadge,
-    };
+    const projectClass = theme === 'dark' ? 'projects_dark section-shell theme-dark' : 'projects_light section-shell theme-light';
 
     return (
         <div className={projectClass}>
-            <div className='container'>
+            <div className="container" style={{ maxWidth: 'var(--max-w)' }}>
                 {projectsData && (
-                    <CardProjects projectsData={projectsData} cardItems={cardItems} />
+                    <CardProjects projectsData={projectsData} />
                 )}
             </div>
         </div>
@@ -53,4 +38,3 @@ const Projects: React.FC = () => {
 };
 
 export default Projects;
-

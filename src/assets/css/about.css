@@ -1,80 +1,94 @@
-/* https: //www.gradient-animator.com */
+/* ===== About ===== */
+.about_dark,
+.about_light {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.about_dark::before,
+.about_light::before {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: -1;
+  pointer-events: none;
+  width: 520px;
+  height: 520px;
+  top: -180px;
+  right: -140px;
+}
+
 .about_dark {
-    /* background-color: black !important;*/
-        background: linear-gradient(270deg, #022947, #000000);
-        background-size: 400% 400%;
-    
-        -webkit-animation: AnimationName 16s ease infinite;
-        -moz-animation: AnimationName 16s ease infinite;
-        -o-animation: AnimationName 16s ease infinite;
-        animation: AnimationName 16s ease infinite;
-        color: white !important;
+  background: radial-gradient(ellipse 80% 60% at 80% 0%, #101a3a 0%, #05070f 60%) !important;
+  color: #eef2ff !important;
+}
+.about_dark::before { background: rgba(37, 99, 235, 0.22); }
+.about_dark::after {
+  content: '';
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  bottom: -180px;
+  left: -140px;
+  border-radius: 50%;
+  filter: blur(100px);
+  background: rgba(34, 211, 238, 0.14);
+  z-index: -1;
 }
 
 .about_light {
-    /*background-color: white !important;*/
-    background: linear-gradient(270deg, #b0b0b0, #ffffff);
-    background-size: 400% 400%;
+  background: radial-gradient(ellipse 80% 60% at 80% 0%, #dbeafe 0%, #f6f7fb 62%) !important;
+  color: #0b1020 !important;
+}
+.about_light::before { background: rgba(37, 99, 235, 0.16); }
 
-    -webkit-animation: AnimationName 16s ease infinite;
-    -moz-animation: AnimationName 16s ease infinite;
-    -o-animation: AnimationName 16s ease infinite;
-    animation: AnimationName 16s ease infinite;
-    color: black !important;
+.about-card {
+  height: 100%;
+  padding: 1.6rem;
+  border-radius: var(--radius-lg);
+  transition: transform 0.35s var(--ease-out), box-shadow 0.35s, border-color 0.35s;
+  position: relative;
+  overflow: hidden;
 }
 
-@-webkit-keyframes AnimationName {
-    0% {
-        background-position: 0% 47%
-    }
-
-    50% {
-        background-position: 100% 54%
-    }
-
-    100% {
-        background-position: 0% 47%
-    }
+.about-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: var(--accent-gradient);
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
-@-moz-keyframes AnimationName {
-    0% {
-        background-position: 0% 47%
-    }
-
-    50% {
-        background-position: 100% 54%
-    }
-
-    100% {
-        background-position: 0% 47%
-    }
+.about-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-glow), var(--shadow-card);
+  border-color: rgba(37, 99, 235, 0.45);
 }
 
-@-o-keyframes AnimationName {
-    0% {
-        background-position: 0% 47%
-    }
+.about-card:hover::before { opacity: 1; }
 
-    50% {
-        background-position: 100% 54%
-    }
-
-    100% {
-        background-position: 0% 47%
-    }
+.about-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
 }
 
-@keyframes AnimationName {
-    0% {
-        background-position: 0% 47%
-    }
+.about-card img {
+  border-radius: var(--radius-md);
+  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.35);
+  transition: transform 0.4s var(--ease-out);
+}
 
-    50% {
-        background-position: 100% 54%
-    }
+.about-card:hover img {
+  transform: scale(1.03);
+}
 
-    100% {
-        background-position: 0% 47%
-    }
+.about-card p {
+  font-weight: 400;
+  line-height: 1.75;
+  opacity: 0.85;
+  margin-bottom: 0;
 }

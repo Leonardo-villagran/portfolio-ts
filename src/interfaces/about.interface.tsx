@@ -18,5 +18,5 @@ export interface AboutDataProps {
     card: string;
     picture: string;
     text: string;
-    color: string;
+    color?: string;
 }

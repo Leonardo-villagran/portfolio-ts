@@ -20,5 +20,10 @@ export default defineConfig({
     strictPort: true,
     host: true,
     origin: "http://0.0.0.0:4173",
+    // usePolling: necesario en unidades de red (Y:) donde el watcher nativo no detecta cambios
+    watch: {
+      usePolling: true,
+      interval: 1000,
+    },
   }, 
 })

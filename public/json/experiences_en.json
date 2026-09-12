@@ -2,6 +2,26 @@
     "title": "Work Experience",
     "content": [
         {
+            "cardTitle": "Cloud Services & AI Development Engineer",
+            "cardSubtitle": "Ate Incaser - Freelance",
+            "cardDetailedText": [
+                "Implement and manage AI-powered educational management and improvement systems.",
+                "Develop Full-Stack web applications integrating generative AI, automation, and data processing."
+            ],
+            "title": "2025 - Present",
+            "icon": "images/experiences/incaser.png"
+        },
+        {
+            "cardTitle": "Cloud Services Development Engineer",
+            "cardSubtitle": "Biotik - Freelance",
+            "cardDetailedText": [
+                "Implementing and managing data collection and analysis systems.",
+                "Developing Full-Stack web systems."
+            ],
+            "title": "2022 - Present",
+            "icon": "images/experiences/biotik.png"
+        },
+        {
             "cardTitle": "Cloud Services Development Engineer",
             "cardSubtitle": "Biotik - Freelance",
             "cardDetailedText": [

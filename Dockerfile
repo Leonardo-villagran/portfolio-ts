@@ -1,20 +1,17 @@
 # Utilizar una imagen de Node.js como base
-FROM node:20.11
+FROM node:22-alpine
 
 # Establecer el directorio de trabajo dentro del contenedor
 WORKDIR /usr/src/app
 
-# Copiar el archivo package.json a la imagen
-COPY package.json .
+# Copiar los archivos de dependencias
+COPY package.json package-lock.json ./
 
-# Instalar dependencias
-RUN npm install
+# Instalar dependencias (ci para builds reproducibles)
+RUN npm ci
 
 # Copiar el resto de los archivos de la aplicación
 COPY . .
-
-# Copiar las variables de entorno desde el archivo .env
-ENV $(cat .env | grep -v ^# | xargs)
 
 # Ejecutar el comando build
 RUN npm run build
@@ -23,4 +20,4 @@ RUN npm run build
 EXPOSE 4173
 
 # Comando para iniciar la aplicación
-CMD [ "npm", "run", "preview" ]
+CMD [ "npm", "run", "preview", "--", "--host", "0.0.0.0", "--port", "4173" ]

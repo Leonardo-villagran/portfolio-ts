@@ -1,15 +1,13 @@
 import { Chrono } from 'react-chrono';
 import { ChronoData } from '../interfaces/chrono.interface';
-import { themeLight } from '../utils/themes'
+import { themeLight } from '../utils/themes';
 
 const ChronoLight: React.FC<ChronoData> = (props: ChronoData) => {
-
-    const { title, content, mode} = props;
+    const { title, content, mode } = props;
 
     return (
         <div>
-            <h2>{title}</h2>
-
+            <h2 className="section-title text-center">{title}</h2>
             <Chrono
                 items={content}
                 mode={mode}
@@ -20,13 +18,13 @@ const ChronoLight: React.FC<ChronoData> = (props: ChronoData) => {
                 slideShow
                 enableDarkToggle
                 useReadMore={false}
-                cardHeight={90}
+                cardHeight={110}
                 theme={themeLight}
                 fontSizes={{
                     cardSubtitle: '1rem',
-                    cardText: '1rem',
+                    cardText: '0.95rem',
                     cardTitle: '1.2rem',
-                    title: '0.8rem',
+                    title: '0.85rem',
                 }}
             >
                 <div className="chrono-icons">
@@ -36,7 +34,7 @@ const ChronoLight: React.FC<ChronoData> = (props: ChronoData) => {
                 </div>
             </Chrono>
         </div>
-    )
-}
+    );
+};
 
 export default ChronoLight;

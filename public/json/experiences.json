@@ -2,6 +2,16 @@
     "title": "Experiencia Laboral",
     "content": [
         {
+            "cardTitle": "Ingeniero de Desarrollo Cloud e IA",
+            "cardSubtitle": "ATE Incaser - Freelance",
+            "cardDetailedText": [
+                "Implementar y administrar sistemas de gestión y mejoramiento educativo potenciados con inteligencia artificial.",
+                "Desarrollar aplicaciones web Full-Stack integrando IA generativa, automatización y procesamiento de datos."
+            ],
+            "title": "2025 - Presente",
+            "icon": "images/experiences/incaser.png"
+        },
+        {
             "cardTitle": "Cloud Services Development Engineer",
             "cardSubtitle": "Biotik - Freelance",
             "cardDetailedText": [

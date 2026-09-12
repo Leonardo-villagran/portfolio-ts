@@ -9,7 +9,6 @@ const About: React.FC = () => {
     const [aboutData, setAboutData] = useState<AboutData | null>(null);
     const { language, theme } = useAppContext();
 
-
     useEffect(() => {
         const fetchAboutData = async () => {
             try {
@@ -22,24 +21,27 @@ const About: React.FC = () => {
         };
 
         fetchAboutData();
+    }, [language]);
 
-    }, [language, theme]);
-
-    // Agrega una clase al contenedor principal del hero según el tema seleccionado
-    const aboutClass = theme === 'dark' ? 'hero_dark' : 'hero_light';
-    const cardColor = theme === 'dark' ? 'bg-dark text-white' : 'bg-light text-dark';
+    const aboutClass = theme === 'dark' ? 'about_dark section-shell theme-dark' : 'about_light section-shell theme-light';
 
     return (
         <div className={aboutClass}>
-            <div className='container'>
+            <div className="container" style={{ maxWidth: 'var(--max-w)' }}>
                 {aboutData && (
                     <div>
-                        <h2 className='text-center'>{aboutData.title}</h2>
-                        <div className="row">
-                            <AboutComponent card={aboutData.about_card} picture={aboutData.about_picture} text={aboutData.about} color={cardColor} />
-                            <AboutComponent card={aboutData.family_card} picture={aboutData.family_picture} text={aboutData.family} color={cardColor} />
-                            <AboutComponent card={aboutData.sport_card} picture={aboutData.sport_picture} text={aboutData.sport} color={cardColor} />
-                            <AboutComponent card={aboutData.hobbie_card} picture={aboutData.hobbie_picture} text={aboutData.hobbie} color={cardColor} />
+                        <div className="text-center">
+                            <span className="section-kicker reveal">About</span>
+                            <h2 className="section-title reveal reveal-1">
+                                {aboutData.title.split(' ').slice(0, -1).join(' ')}{' '}
+                                <span className="gradient-text">{aboutData.title.split(' ').slice(-1)}</span>
+                            </h2>
+                        </div>
+                        <div className="row mt-4">
+                            <AboutComponent card={aboutData.about_card} picture={aboutData.about_picture} text={aboutData.about} />
+                            <AboutComponent card={aboutData.family_card} picture={aboutData.family_picture} text={aboutData.family} />
+                            <AboutComponent card={aboutData.sport_card} picture={aboutData.sport_picture} text={aboutData.sport} />
+                            <AboutComponent card={aboutData.hobbie_card} picture={aboutData.hobbie_picture} text={aboutData.hobbie} />
                         </div>
                     </div>
                 )}

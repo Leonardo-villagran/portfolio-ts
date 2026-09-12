@@ -5,12 +5,9 @@ import App from './App.tsx'
 
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { CssBaseline } from '@mui/material';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <CssBaseline>
-      <App />
-    </CssBaseline>
+    <App />
   </React.StrictMode>,
 )

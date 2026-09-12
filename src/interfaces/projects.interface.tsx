@@ -26,6 +26,6 @@ export interface CardItems {
 
 export interface CardProjectsProps {
     projectsData: ProjectsData;
-    cardItems: CardItems;
+    cardItems?: CardItems;
 }
 

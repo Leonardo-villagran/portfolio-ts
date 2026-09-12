@@ -2,13 +2,151 @@
     "title": "Projects",
     "projects": [
         {
-            "image": "images/projects/biotik.jpg",
-            "title": "Biotik - Web App",
+            "image": "images/projects/portafolio.jpg",
+            "title": "Chilean Teaching Portfolio - AI-Powered Educational Platform",
             "bodyText": [
-                "Main website of the company.",
-                "Frontend developed in React-Vite.",
-                "Backend developed in Express.",
-                "Data obtained from Postgres."
+                "Web application designed for teachers to support the creation and management of their Teaching Portfolio.",
+                "AI-assisted generation of lesson plans, assessments, and educational resources.",
+                "Tools designed to support teaching work and structure content according to Chilean educational requirements.",
+                "Frontend developed with React and Vite.",
+                "Backend developed with Node.js and Express, with data persistence in PostgreSQL."
+            ],
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/portafolio"
+                },
+                {
+                    "text": "Live",
+                    "href": "https://portafolio-incaser.duckdns.org/"
+                }
+            ],
+            "tags": [
+                "React",
+                "Vite",
+                "Node.js",
+                "Express",
+                "PostgreSQL",
+                "Generative AI",
+                "Educational Technology",
+                "Google Cloud Platform",
+                "Docker",
+                "Nginx Proxy Manager"
+            ]
+        },
+        {
+            "image": "images/projects/tracker.jpg",
+            "title": "Project Tracker - Project Management System",
+            "bodyText": [
+                "Web application for project management and tracking.",
+                "Centralizes project information and facilitates monitoring of project status and progress.",
+                "Interface focused on managing and visualizing operational information.",
+                "System deployed as a web application accessible through cloud infrastructure."
+            ],
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/proyectos_tracker"
+                },
+                {
+                    "text": "Live",
+                    "href": "https://proyectos-tracker.duckdns.org/"
+                }
+            ],
+            "tags": [
+                "React",
+                "Vite",
+                "Node.js",
+                "Express",
+                "PostgreSQL",
+                "WebSockets",
+                "Google Cloud Platform",
+                "Docker",
+                "Nginx Proxy Manager"
+            ]
+        },
+        {
+            "image": "images/projects/simce.jpg",
+            "title": "SIMCE Practice Tests - Results Management System",
+            "bodyText": [
+                "Web application for managing, processing, and analyzing SIMCE practice test results.",
+                "Visualization of results by student, class, question, and indicator to facilitate academic performance tracking.",
+                "Generation of metrics, achievement percentages, and reports to support the analysis of practice test results.",
+                "Use of artificial intelligence as a support tool for reviewing and grading tests.",
+                "Frontend developed with React and Vite.",
+                "Backend developed with Node.js and Express, using Prisma ORM and PostgreSQL for data management.",
+                "Application deployed with Docker on cloud infrastructure."
+            ],
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/simce_ateincaser"
+                },
+                {
+                    "text": "Live",
+                    "href": "https://simce.duckdns.org/"
+                }
+            ],
+            "tags": [
+                "React",
+                "Vite",
+                "Node.js",
+                "Express",
+                "Prisma",
+                "PostgreSQL",
+                "Gemini",
+                "Data Analysis",
+                "Educational Technology",
+                "Assessment Management",
+                "Docker",
+                "Cloud"
+            ]
+        },
+        {
+            "image": "images/projects/planifica.jpg",
+            "title": "Diversified Educational Assistant - AI-Powered Lesson Planning",
+            "bodyText": [
+                "Web application for creating educational lesson plans with the support of specialized artificial intelligence.",
+                "Assisted generation of activities, teaching strategies, assessments, and classroom resources.",
+                "Integration of generative artificial intelligence through Gemini APIs.",
+                "Frontend developed with React and Vite.",
+                "Backend developed with Node.js and Express, using Prisma ORM and PostgreSQL for data management.",
+                "Application deployed with Docker on cloud infrastructure."
+            ],
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/oa_ai_complete"
+                },
+                {
+                    "text": "Live",
+                    "href": "https://planificacion.duckdns.org/"
+                }
+            ],
+            "tags": [
+                "React",
+                "Vite",
+                "Node.js",
+                "Express",
+                "Prisma",
+                "PostgreSQL",
+                "Gemini",
+                "Generative AI",
+                "Artificial Intelligence",
+                "Educational Technology",
+                "Docker",
+                "Cloud"
+            ]
+        },
+        {
+            "image": "images/projects/biotik.jpg",
+            "title": "Biotik - Full-Stack Web Application",
+            "bodyText": [
+                "Corporate website and main platform for Biotik.",
+                "Frontend developed with React and Vite.",
+                "Backend developed with Node.js and Express.",
+                "Data persistence and management using PostgreSQL.",
+                "Application deployed on cloud infrastructure using Google Cloud Platform, Docker, and Nginx Proxy Manager."
             ],
             "links": [
                 {
@@ -21,21 +159,25 @@
                 }
             ],
             "tags": [
-                "React-Vite",
+                "React",
+                "Vite",
+                "Node.js",
                 "Express",
-                "Postgres",
-                "GCP",
-                "Proxy-Manager",
-                "Docker"
+                "PostgreSQL",
+                "Google Cloud Platform",
+                "Docker",
+                "Nginx Proxy Manager"
             ]
         },
         {
             "image": "images/projects/gestion.jpg",
-            "title": "Biotik - ODK Management",
+            "title": "Biotik - ODK Management Platform",
             "bodyText": [
-                "User and project management system.",
-                "Visualization of project progress through websockets.",
-                "Visualization of reports and maps."
+                "Web platform for managing users, projects, and ODK-related processes.",
+                "Real-time monitoring of project status and progress using WebSockets.",
+                "Visualization of reports, operational data, and interactive maps.",
+                "Integration with Google Drive and Google Maps for information management and visualization.",
+                "Application deployed on cloud infrastructure using Docker and Google Cloud Platform."
             ],
             "links": [
                 {
@@ -48,11 +190,13 @@
                 }
             ],
             "tags": [
-                "React-Vite",
+                "React",
+                "Vite",
+                "Node.js",
                 "Express",
-                "Websockets",
-                "Postgres",
-                "GCP",
+                "WebSockets",
+                "PostgreSQL",
+                "Google Cloud Platform",
                 "Google Drive",
                 "Google Maps",
                 "Docker"
@@ -60,10 +204,13 @@
         },
         {
             "image": "images/projects/process.jpg",
-            "title": "Biotik - ODK Process",
+            "title": "Biotik - ODK Data Processing",
             "bodyText": [
-                "Data management system obtained from ODK Central server.",
-                "Project processing for report generation in Google Sheet."
+                "System for managing and processing data obtained from ODK Central servers.",
+                "Automation of project processing and information consolidation using Python and Flask.",
+                "Automatic generation of reports and results in Google Sheets.",
+                "Data processing and storage using PostgreSQL.",
+                "Application deployed on cloud infrastructure using Docker and Google Cloud Platform."
             ],
             "links": [
                 {
@@ -78,22 +225,23 @@
             "tags": [
                 "Python",
                 "Flask",
-                "Websockets",
-                "Postgres",
-                "GCP",
-                "Google Sheet",
+                "WebSockets",
+                "PostgreSQL",
+                "Google Cloud Platform",
+                "Google Sheets",
                 "ODK Central",
                 "Docker"
             ]
         },
         {
             "image": "images/projects/comics.jpg",
-            "title": "ComicsKites - Web App",
+            "title": "ComicsKites - Full-Stack Web Application",
             "bodyText": [
-                "Main website of a virtual comic store.",
-                "Frontend developed in React-Vite.",
-                "Data obtained from Postgres database.",
-                "Final project of Desafío Latam."
+                "Web application for an online store specializing in comics.",
+                "Frontend developed with React and Vite.",
+                "Backend developed with Node.js and Express.",
+                "Data persistence and management using PostgreSQL.",
+                "Final project developed during the Full-Stack program at Desafío Latam."
             ],
             "links": [
                 {
@@ -106,18 +254,20 @@
                 }
             ],
             "tags": [
-                "React-Vite",
+                "React",
+                "Vite",
+                "Node.js",
                 "Express",
-                "Postgres"
+                "PostgreSQL"
             ]
         },
         {
             "image": "images/projects/chicagoasociados.jpg",
             "title": "Chicago Asesorias - Web App",
             "bodyText": [
-                "Main website of the company.",
-                "Frontend developed in React.",
-                "Data obtained from Json.",
+                "Main company website.",
+                "Frontend developed with React.",
+                "Data obtained from JSON.",
                 "App deployed on GitHub Pages."
             ],
             "links": [
@@ -140,9 +290,9 @@
             "image": "images/projects/pizza.jpg",
             "title": "Pizzeria - Web App",
             "bodyText": [
-                "Main website of the company.",
-                "Frontend developed in React.",
-                "Data obtained from Json.",
+                "Main company website.",
+                "Frontend developed with React.",
+                "Data obtained from JSON.",
                 "App deployed on Netlify."
             ],
             "links": [
@@ -165,9 +315,9 @@
             "image": "images/projects/portfolio.jpg",
             "title": "Portfolio - Web App",
             "bodyText": [
-                "Personal portfolio in English and/or Spanish.",
-                "Frontend developed in React-Vite and TypeScript.",
-                "Customizable through JSON files.",
+                "Personal portfolio available in English and/or Spanish.",
+                "Frontend developed with React, Vite, and TypeScript.",
+                "Supports customization through JSON files.",
                 "App deployed on Netlify and Render.com."
             ],
             "links": [
@@ -191,13 +341,13 @@
         },
         {
             "image": "images/projects/cuidadoras.jpg",
-            "title": "Cuidadoras - Web App",
+            "title": "Caregivers - Web App",
             "bodyText": [
-                "Website about caregivers in private homes.",
-                "Frontend developed in React.",
+                "Website about caregivers working in private households.",
+                "Frontend developed with React.",
                 "Developed with TypeScript.",
-                "Data obtained from Json.",
-                "App implemented on Github Pages."
+                "Data obtained from JSON.",
+                "App deployed on GitHub Pages."
             ],
             "links": [
                 {
@@ -211,18 +361,18 @@
             ],
             "tags": [
                 "React",
-                "TypeScript",
+                "Typescript",
                 "Json",
-                "GitHub Pages"
+                "Github Pages"
             ]
         },
         {
             "image": "images/projects/pokemon.jpg",
-            "title": "Frontend PokeApi - Web App",
+            "title": "PokeAPI Frontend - Web App",
             "bodyText": [
-                "Website that retrieves Pokémon from a web list.",
-                "Frontend developed in React.",
-                "Data obtained from the PokeApi.",
+                "Web application that retrieves Pokémon data from an API.",
+                "Frontend developed with React.",
+                "Data obtained from the PokeAPI.",
                 "App deployed on GitHub Pages."
             ],
             "links": [
@@ -240,14 +390,13 @@
                 "Json",
                 "Github Pages"
             ]
-        }
-        ,
+        },
         {
             "image": "images/projects/postgres.jpg",
             "title": "PostgreSQL with Docker",
             "bodyText": [
-                "Docker Compose for PostgreSQL.",
-                "Allows to deploy a PostgreSQL server.",
+                "Docker Compose setup for PostgreSQL.",
+                "Allows you to run a PostgreSQL server.",
                 "Configuration can be customized through docker-compose.yml and environment variables."
             ],
             "links": [
@@ -259,7 +408,7 @@
             "tags": [
                 "Docker",
                 "Docker Compose",
-                "PostgreSQL", 
+                "PostgreSQL",
                 "VS Code"
             ]
         },
@@ -267,9 +416,9 @@
             "image": "images/projects/mongodb.jpg",
             "title": "MongoDB with Docker",
             "bodyText": [
-                "MongoDB Docker Compose setup.",
-                "Allows to deploy a MongoDB server.",
-                "Configuration can be customized via docker-compose.yml and environment variables."
+                "Docker Compose setup for MongoDB.",
+                "Allows you to run a MongoDB server.",
+                "Configuration can be customized through docker-compose.yml and environment variables."
             ],
             "links": [
                 {
@@ -280,17 +429,17 @@
             "tags": [
                 "Docker",
                 "Docker Compose",
-                "MongoDB", 
+                "MongoDB",
                 "VS Code"
             ]
         },
         {
             "image": "images/projects/mysql.jpg",
-            "title": "Mysql from Docker",
+            "title": "MySQL with Docker",
             "bodyText": [
-                "Mysql Docker Compose.",
-                "Allows running a Mysql server.",
-                "Configuration can be customized from docker-compose.yml and environment variables."
+                "Docker Compose setup for MySQL.",
+                "Allows you to run a MySQL server.",
+                "Configuration can be customized through docker-compose.yml and environment variables."
             ],
             "links": [
                 {

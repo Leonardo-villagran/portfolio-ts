@@ -1,26 +1,26 @@
 import {Theme} from '../interfaces/theme.interface';
 
 export const themeDark: Theme ={
-    primary: '#3d84c6', // Color de fondo de la línea de tiempo y del contenido
-    secondary: 'white', // Color del punto de tiempo y de los detalles de la tarjeta
-    cardBgColor: '#1b1b1b', // Fondo de la tarjeta
-    titleColor: '#808080', // Color del título de la tarjeta
-    titleColorActive: '#007fff', // Color del subtítulo de la tarjeta
-    cardForeColor: 'red',
-    cardSubtitleColor: '#3d84c6',
-    cardTitleColor: 'white',
-    cardDetailsColor: '#808080', // Color del texto de la tarjeta
+    primary: '#2563eb', // Color de fondo de la línea de tiempo y del contenido
+    secondary: '#38bdf8', // Color del punto de tiempo y de los detalles de la tarjeta
+    cardBgColor: '#0e152e', // Fondo de la tarjeta
+    titleColor: '#eef2ff', // Color del título de la tarjeta
+    titleColorActive: '#38bdf8', // Color del subtítulo de la tarjeta
+    cardForeColor: '#0e152e',
+    cardSubtitleColor: '#38bdf8',
+    cardTitleColor: '#ffffff',
+    cardDetailsColor: '#aab4d4', // Color del texto de la tarjeta
 
 }
 
 export const themeLight: Theme = {
-    primary: 'black',
-    secondary: '#3d84c6',
-    cardBgColor: '#f0f0f0',
-    titleColor: '#333333',
-    titleColorActive: 'white',
-    cardForeColor: 'black',
-    cardSubtitleColor: '#3d84c6',
-    cardTitleColor: '#333333',
-    cardDetailsColor: '#303030',
+    primary: '#2563eb',
+    secondary: '#0ea5e9',
+    cardBgColor: '#ffffff',
+    titleColor: '#0b1020',
+    titleColorActive: '#1d4ed8',
+    cardForeColor: '#ffffff',
+    cardSubtitleColor: '#1d4ed8',
+    cardTitleColor: '#0b1020',
+    cardDetailsColor: '#475069',
 };

@@ -2,6 +2,12 @@
     "title": "Educación",
     "content": [
         {
+            "title": "2024 - 2025",
+            "cardTitle": "Data Scientist con Python",
+            "cardSubtitle": "Desafío Latam",
+            "icon": "images/education/desafio_latam.png"
+        },
+        {
             "title": "2022 - 2023",
             "cardTitle": "Desarrollo Full-Stack JavaScript",
             "cardSubtitle": "Desafío Latam",
