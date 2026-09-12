@@ -1,92 +1,149 @@
 {
     "title": "Stack tecnológico",
-    "intro": "Estos son algunos de los principales lenguajes, tecnologías, herramientas y plataformas con los que he trabajado:",
+    "intro": "Principales lenguajes, tecnologías, herramientas y plataformas estructuradas por especialidad:",
     "skills": [
         {
-            "title": "Lenguajes & Bases de Datos",
+            "title": "Inteligencia Artificial & Modelos LLMs",
             "items": [
                 {
-                    "icon": "images/skills/js.png",
-                    "title": "JavaScript"
+                    "icon": "images/skills/chatgpt.svg",
+                    "title": "ChatGPT"
                 },
                 {
-                    "icon": "images/skills/python.png",
-                    "title": "Python"
+                    "icon": "images/skills/gemini.svg",
+                    "title": "Gemini"
                 },
                 {
-                    "icon": "images/skills/php.png",
-                    "title": "PHP"
-                },
-
-                {
-                    "icon": "images/skills/mysql.png",
-                    "title": "MySQL"
+                    "icon": "images/skills/deepseek.svg",
+                    "title": "DeepSeek"
                 },
                 {
-                    "icon": "images/skills/postgres.png",
-                    "title": "PostgreSQL"
+                    "icon": "images/skills/codex.svg",
+                    "title": "Codex"
                 },
                 {
-                    "icon": "images/skills/mongodb.png",
-                    "title": "MongoDB"
+                    "icon": "images/skills/claude.svg",
+                    "title": "Claude"
+                },
+                {
+                    "icon": "images/skills/qwen.svg",
+                    "title": "Qwen"
                 }
             ]
         },
         {
-            "title": "Frameworks & Tecnologías",
+            "title": "Lenguajes de Programación",
             "items": [
                 {
-                    "icon": "images/skills/nodejs.png",
-                    "title": "Nodejs"
+                    "icon": "images/skills/js.svg",
+                    "title": "JavaScript"
                 },
                 {
-                    "icon": "images/skills/react.png",
+                    "icon": "images/skills/typescript.svg",
+                    "title": "TypeScript"
+                },
+                {
+                    "icon": "images/skills/python.svg",
+                    "title": "Python"
+                },
+                {
+                    "icon": "images/skills/php.svg",
+                    "title": "PHP"
+                },
+                {
+                    "icon": "images/skills/java.svg",
+                    "title": "Java"
+                },
+                {
+                    "icon": "images/skills/c-plus-plus.svg",
+                    "title": "C++"
+                }
+            ]
+        },
+        {
+            "title": "Bases de Datos",
+            "items": [
+                {
+                    "icon": "images/skills/postgres.svg",
+                    "title": "PostgreSQL"
+                },
+                {
+                    "icon": "images/skills/mysql.svg",
+                    "title": "MySQL"
+                },
+                {
+                    "icon": "images/skills/mongodb.svg",
+                    "title": "MongoDB"
+                },
+                {
+                    "icon": "images/skills/redis.svg",
+                    "title": "Redis"
+                },
+                {
+                    "icon": "images/skills/sqlite.svg",
+                    "title": "SQLite"
+                },
+                {
+                    "icon": "images/skills/qdrant.svg",
+                    "title": "Qdrant"
+                }
+            ]
+        },
+        {
+            "title": "Frameworks & Tecnologías Web",
+            "items": [
+                {
+                    "icon": "images/skills/react.svg",
                     "title": "React"
                 },
                 {
-                    "icon": "images/skills/express.png",
+                    "icon": "images/skills/nodejs.svg",
+                    "title": "Node.js"
+                },
+                {
+                    "icon": "images/skills/express.svg",
                     "title": "Express"
                 },
                 {
-                    "icon": "images/skills/flask.png",
+                    "icon": "images/skills/nestjs.svg",
+                    "title": "NestJS"
+                },
+                {
+                    "icon": "images/skills/flask.svg",
                     "title": "Flask"
                 },
                 {
-                    "icon": "images/skills/leaflet.png",
-                    "title": "Leaflet"
-                },
-                {
-                    "icon": "images/skills/vite.png",
+                    "icon": "images/skills/vite.svg",
                     "title": "Vite"
                 }
             ]
         },
         {
-            "title": "Herramientas & Plataformas",
+            "title": "Herramientas & Cloud",
             "items": [
                 {
-                    "icon": "images/skills/vs_code.png",
-                    "title": "VS Code"
-                },
-                {
-                    "icon": "images/skills/git.png",
-                    "title": "Git"
-                },
-                {
-                    "icon": "images/skills/docker.png",
+                    "icon": "images/skills/docker.svg",
                     "title": "Docker"
                 },
                 {
-                    "icon": "images/skills/odk.png",
-                    "title": "ODK Central"
-                },
-                {
-                    "icon": "images/skills/gcp.png",
+                    "icon": "images/skills/gcp.svg",
                     "title": "Google Cloud Platform"
                 },
                 {
-                    "icon": "images/skills/office.png",
-                    "title": "Microsoft Office"
+                    "icon": "images/skills/git.svg",
+                    "title": "Git"
+                },
+                {
+                    "icon": "images/skills/vs_code.svg",
+                    "title": "VS Code"
+                },
+                {
+                    "icon": "images/skills/cursor.svg",
+                    "title": "Cursor"
+                },
+                {
+                    "icon": "images/skills/odk.svg",
+                    "title": "ODK Central"
                 }
             ]
         }

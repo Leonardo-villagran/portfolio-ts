@@ -3,7 +3,7 @@ export interface EducationData {
     content: EducationItem[];
 }
 
-interface EducationItem {
+export interface EducationItem {
     title: string;
     cardTitle: string;
     cardSubtitle: string;
