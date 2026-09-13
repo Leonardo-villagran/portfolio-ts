@@ -36,7 +36,7 @@ const ContactForm: React.FC = () => {
     const [submitError, setSubmitError] = useState<boolean>(false);
     const [contactData, setContactData] = useState<ContactData | null>(null);
     const [copiedEmail, setCopiedEmail] = useState<boolean>(false);
-    const [resumeUrl, setResumeUrl] = useState<string>('https://drive.google.com/file/d/110ocegbjrCCNXBCh72ALDjTYxquBf-6L/view');
+    const [resumeUrl, setResumeUrl] = useState<string>('https://drive.google.com/file/d/1VCEHmb_qvZMA5vTpRAAoGzt15bgO93Dh/view?usp=sharing');
 
     useEffect(() => {
         const fetchContactData = async () => {
@@ -110,8 +110,28 @@ const ContactForm: React.FC = () => {
             return;
         }
 
+        const isEmailJsConfigured = Boolean(serviceId && templateId && userId);
+
+        if (!isEmailJsConfigured) {
+            // Fallback inmediato si no hay credenciales de EmailJS configuradas en .env
+            const subject = encodeURIComponent(`Contacto Portafolio - ${formData.userName}`);
+            const body = encodeURIComponent(
+                `Nombre: ${formData.userName}\nCorreo: ${formData.email}\n\nMensaje:\n${formData.message}`
+            );
+            window.open(`mailto:leonardovillagranchicago@gmail.com?subject=${subject}&body=${body}`, '_blank');
+            setSubmitting(false);
+            setSubmitSuccess(true);
+            setSubmitError(false);
+            setFormData({ userName: '', email: '', message: '' });
+            return;
+        }
+
         emailjs.send(serviceId, templateId, {
+            name: formData.userName,
+            from_name: formData.userName,
             user_name: formData.userName,
+            email: formData.email,
+            reply_to: formData.email,
             user_email: formData.email,
             message: formData.message,
         }, userId)
@@ -127,7 +147,7 @@ const ContactForm: React.FC = () => {
                 setSubmitting(false);
                 setSubmitError(true);
                 setSubmitSuccess(false);
-                console.error('Error sending email:', error);
+                console.error('Error sending email via EmailJS:', error);
             });
     };
 

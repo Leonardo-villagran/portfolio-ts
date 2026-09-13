@@ -70,7 +70,7 @@ body {
   overflow: hidden;
 }
 
-@media (max-width: 768px), (max-height: 650px) {
+@media (max-width: 991px), (max-height: 680px) {
   .app-wrapper.is-home-page {
     height: auto;
     min-height: 100dvh;

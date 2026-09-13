@@ -6,7 +6,7 @@ import '../assets/css/Menu.css';
 import { useAppContext } from '../context/Context';
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import DescriptionIcon from '@mui/icons-material/Description';
-import TranslateIcon from '@mui/icons-material/Translate';
+import LanguageIcon from '@mui/icons-material/Language';
 
 const Menu: React.FC = () => {
     const { language, setLanguage } = useAppContext();
@@ -124,7 +124,7 @@ const Menu: React.FC = () => {
                                 <NavDropdown
                                     title={
                                         <span className="nav-lang-trigger">
-                                            <TranslateIcon sx={{ fontSize: '1rem', marginRight: '4px' }} />
+                                            <LanguageIcon sx={{ fontSize: '1.05rem', marginRight: '5px' }} />
                                             {language === 'es' ? 'ES' : 'EN'}
                                         </span>
                                     }
