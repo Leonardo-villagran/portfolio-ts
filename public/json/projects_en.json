@@ -199,6 +199,7 @@
                 "Google Cloud Platform",
                 "Google Drive",
                 "Google Maps",
+                "AI",
                 "Docker"
             ]
         },
@@ -234,34 +235,6 @@
             ]
         },
         {
-            "image": "images/projects/comics.jpg",
-            "title": "ComicsKites - Full-Stack Web Application",
-            "bodyText": [
-                "Web application for an online store specializing in comics.",
-                "Frontend developed with React and Vite.",
-                "Backend developed with Node.js and Express.",
-                "Data persistence and management using PostgreSQL.",
-                "Final project developed during the Full-Stack program at Desafío Latam."
-            ],
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/Leonardo-villagran/comicskite_front"
-                },
-                {
-                    "text": "Live",
-                    "href": "https://react-comicskites.onrender.com"
-                }
-            ],
-            "tags": [
-                "React",
-                "Vite",
-                "Node.js",
-                "Express",
-                "PostgreSQL"
-            ]
-        },
-        {
             "image": "images/projects/chicagoasociados.jpg",
             "title": "Chicago Asesorias - Web App",
             "bodyText": [
@@ -284,31 +257,6 @@
                 "React",
                 "Json",
                 "GitHub Pages"
-            ]
-        },
-        {
-            "image": "images/projects/pizza.jpg",
-            "title": "Pizzeria - Web App",
-            "bodyText": [
-                "Main company website.",
-                "Frontend developed with React.",
-                "Data obtained from JSON.",
-                "App deployed on Netlify."
-            ],
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/Leonardo-villagran/pizzeria"
-                },
-                {
-                    "text": "Live",
-                    "href": "https://polite-babka-484d6e.netlify.app"
-                }
-            ],
-            "tags": [
-                "React",
-                "Json",
-                "Netlify"
             ]
         },
         {
@@ -362,31 +310,6 @@
             "tags": [
                 "React",
                 "Typescript",
-                "Json",
-                "Github Pages"
-            ]
-        },
-        {
-            "image": "images/projects/pokemon.jpg",
-            "title": "PokeAPI Frontend - Web App",
-            "bodyText": [
-                "Web application that retrieves Pokémon data from an API.",
-                "Frontend developed with React.",
-                "Data obtained from the PokeAPI.",
-                "App deployed on GitHub Pages."
-            ],
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/Leonardo-villagran/pokemon-app"
-                },
-                {
-                    "text": "Live",
-                    "href": "https://polite-babka-484d6e.netlify.app"
-                }
-            ],
-            "tags": [
-                "React",
                 "Json",
                 "Github Pages"
             ]

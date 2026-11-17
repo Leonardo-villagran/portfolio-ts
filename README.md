@@ -1,236 +1,181 @@
-## React Portfolio-ts Website
+# Portfolio TS — Leonardo Villagrán
 
-Este es un ejemplo básico de una aplicación de portafolio utilizando React y Typescript para la navegación. La aplicación incluye una barra de navegación, secciones para la página de inicio, sobre mí, habilidades, educación, experiencias, proyectos y contacto. Se pueden personalizar los contenidos de cada sección editando los archivos JSON correspondientes. También se incluye un sistema de contacto que utiliza EmailJS para enviar emails a través de los servicios configurados con las credenciales proporcionadas.
+Portafolio bilingüe (ES/EN) con React 19 + TypeScript + Vite. Todo el contenido es editable sin tocar código, vía archivos JSON.
 
-Pueden ver el ejemplo en el siguiente enlace desde Netlify: [https://leonardo-villagran-portfolio-ts.netlify.app/](https://leonardo-villagran-portfolio-ts.netlify.app)
+**Demos:**
+- Netlify: https://leonardo-villagran-portfolio-ts.netlify.app/
+- Render: https://portfolio-ts-wkho.onrender.com/
 
-Pueden ver el ejemplo en el siguiente enlace desde Render.com: [https://portfolio-ts-wkho.onrender.com/](https://portfolio-ts-wkho.onrender.com/)
-
-
-![alt text](public/images/cap_spanish.jpg)
+![Portada](public/images/cap_spanish.jpg)
 
 ## Índice
 
-- [Instrucciones de Uso](#instrucciones-de-uso)
-    - [1. Clonar el Repositorio](#1-clonar-el-repositorio)
-    - [2. Instalar Dependencias](#2-instalar-dependencias)
-    - [3. Iniciar la Aplicación](#3-iniciar-la-aplicación)
-- [Estructura del Proyecto](#estructura-del-proyecto)
-- [Configuración de las Rutas](#configuración-de-las-rutas)
-- [Dependencias Utilizadas](#dependencias-utilizadas)
-    - [Dependencias](#dependencias)
-    - [Dependencias de desarrollo (devDependencies)](#dependencias-de-desarrollo-devdependencies)
+1. [Arranque rápido](#1-arranque-rápido)
+2. [Dónde editar cada cosa](#2-dónde-editar-cada-cosa)
+3. [Cambiar links del CV](#3-cambiar-links-del-cv)
+4. [Idiomas ES/EN](#4-idiomas-esen)
+5. [Formulario de contacto (EmailJS)](#5-formulario-de-contacto-emailjs)
+6. [Scripts y puertos](#6-scripts-y-puertos)
+7. [Docker](#7-docker)
+8. [Deploy](#8-deploy)
+9. [Estructura del proyecto](#9-estructura-del-proyecto)
 
-- [Personalización](#personalización)
-- [Configuración del sistema de contacto](#configuración-del-sistema-de-contacto)
-- [Cómo subir el portafolio a GitHub Pages](#cómo-subir-el-portafolio-a-github-pages)
-- [Cómo subir a render.com](#cómo-subir-a-rendercom)
+---
 
-
-### Instrucciones de Uso
-
-Sigue estos pasos para configurar y ejecutar la aplicación en tu entorno local.
-
-#### 1. Clonar el Repositorio
+## 1. Arranque rápido
 
 ```bash
 git clone https://github.com/Leonardo-villagran/portfolio-ts
 cd portfolio-ts
-```
-
-#### 2. Instalar Dependencias
-
-```bash
 npm install
-```
-
-#### 3. Iniciar la Aplicación
-
-```bash
+cp .env.example .env   # y rellena las 3 claves de EmailJS (ver punto 5)
 npm run dev
 ```
 
-La aplicación se ejecutará en modo de desarrollo. Abre [http://localhost:4173/](http://localhost:4173/) en tu navegador para verla.
+Abre http://localhost:4173/
 
-### Estructura del Proyecto
+> En Windows puedes usar `dev.bat` (mata el proceso anterior en :4173, arranca `npm run dev` y abre el navegador).
 
-- **`src/components/`** Contiene los componentes con el código de programación de Home, About, Skills, Education, Experiences, Projects, Contact. 
-- **`src/App.jsx`**: Archivo principal que configura las rutas y utiliza React Router.
+## 2. Dónde editar cada cosa
 
-### Configuración de las Rutas
+Todo el texto vive en `public/json/`. Hay un archivo por sección y por idioma (`*_en.json` = inglés).
 
-El archivo `src/App.jsx` utiliza React Router para manejar las rutas de la aplicación. A continuación, se describen las rutas disponibles:
+| Quiero cambiar... | Archivo ES | Archivo EN |
+|---|---|---|
+| Menú + botón CV | `public/json/menu.json` | `public/json/menu_en.json` |
+| Home (nombre, roles, LinkedIn, GitHub, email) | `public/json/home.json` | `public/json/home_en.json` |
+| Sobre mí | `public/json/about.json` | `public/json/about_en.json` |
+| Habilidades / Stack | `public/json/skills.json` | `public/json/skills_en.json` |
+| Experiencia | `public/json/experiences.json` | `public/json/experiences_en.json` |
+| Educación | `public/json/education.json` | `public/json/education_en.json` |
+| Proyectos | `public/json/projects.json` | `public/json/projects_en.json` |
+| Contacto (etiquetas del formulario) | `public/json/contact.json` | `public/json/contact_en.json` |
+| Idiomas activos | `public/json/app.json` | — |
 
-- `/`: Página de inicio.
-- `/about`: Página "Sobre Mí".
-- `/skills`: Página de habilidades.
-- `/education`: Página de educación.
-- `/experiences`: Página de experiencias.
-- `/projects`: Página de proyectos.
-- `/contact`: Página de contacto.
-- `/currículum`: Link a mi currículum en google drive
+Ejemplo (`home.json`):
 
-Puedes personalizar estas rutas según tus necesidades y agregar más rutas según sea necesario.
+```json
+{
+  "name": "Leonardo Villagrán",
+  "roles": ["Ingeniero en Informática y Gestión", "Data Scientist"],
+  "linkedin": "https://www.linkedin.com/in/leonardo-villagran/",
+  "github": "https://github.com/Leonardo-villagran",
+  "email": "leonardovillagranchicago@gmail.com"
+}
+```
 
-Estas son las dependencias más importantes listadas en el archivo `package.json` y su propósito en el proyecto:
+Reglas:
+- Edita siempre el par ES + EN para que no queden textos mezclados.
+- Es JSON estricto: respeta comas y comillas dobles.
+- Los cambios en `public/` se ven con recarga automática (no requieren rebuild en `dev`).
 
-### Dependencias utilizadas:
+Imágenes: `public/images/` (ej: `public/images/about/profile.jpg` es la foto del Home).
 
-#### Dependencias:
+## 3. Cambiar links del CV
 
-1. **@emailjs/browser**:
-   - Esta es una biblioteca que permite enviar correos electrónicos directamente desde el navegador utilizando JavaScript.
+Hay un único punto de verdad por idioma. Los 3 botones (menú, Home y Contacto) leen de ahí automáticamente.
 
-2. **axios**:
-   - Axios es un cliente HTTP basado en Promesas que se utiliza para realizar solicitudes HTTP, como solicitudes GET, POST, etc.
+- Español → `public/json/menu.json` → `resume.link`
+- Inglés → `public/json/menu_en.json` → `resume.link`
 
-3. **bootstrap**:
-   - Bootstrap es un marco de trabajo de diseño front-end popular que proporciona una estructura y componentes predefinidos para desarrollar rápidamente interfaces de usuario atractivas y receptivas.
+```json
+"resume": {
+  "title": "Currículum",
+  "link": "https://drive.google.com/file/d/TU_ID_ES/view?usp=sharing"
+}
+```
 
-4. **react**:
-   - React es una biblioteca de JavaScript de código abierto utilizada para construir interfaces de usuario (UI) interactivas de una sola página.
+Valores actuales (2026):
 
-5. **react-bootstrap**:
-   - React Bootstrap es una versión de Bootstrap reescrita para React. Proporciona componentes de interfaz de usuario de Bootstrap como componentes React.
+| Idioma | Link |
+|---|---|
+| ES | https://drive.google.com/file/d/1VCEHmb_qvZMA5vTpRAAoGzt15bgO93Dh/view?usp=sharing |
+| EN | https://drive.google.com/file/d/1wQ7RaVkbr0nZFrOPurQGEZK2Uh4dQC2G/view?usp=sharing |
 
-6. **react-chrono**:
-   - React Chrono es una biblioteca para crear líneas de tiempo interactivas y visualmente atractivas en aplicaciones web de React.
+> Para que el link sea público: en Drive → Compartir → "Cualquier persona con el enlace puede ver".
 
-7. **react-dom**:
-   - React DOM es un paquete que proporciona métodos específicos para manipular el DOM de HTML en aplicaciones web de React.
+Los componentes que lo usan (no necesitas editarlos): `src/components/Menu.tsx`, `src/pages/Home.tsx`, `src/pages/Contact.tsx`.
 
-8. **react-hook-form**:
-   - React Hook Form es una biblioteca de React que se utiliza para gestionar formularios de manera eficiente y sencilla mediante el uso de ganchos (hooks).
+## 4. Idiomas ES/EN
 
-9. **react-router-dom**:
-   - React Router DOM es una biblioteca que proporciona navegación y enrutamiento declarativos para aplicaciones web de React.
+`public/json/app.json` controla si aparece el selector de idioma:
 
-10. **react-social-icons**:
-    - React Social Icons es una biblioteca que proporciona iconos sociales predefinidos para su uso en aplicaciones web de React.
+```json
+{
+  "portfolioLanguages": { "spanish": true, "english": true }
+}
+```
 
-11. **serve**:
-    - Serve es un servidor HTTP estático simple que se utiliza principalmente para servir archivos estáticos locales durante el desarrollo de aplicaciones web.
+- Ambos en `true` → aparece el dropdown ES/EN.
+- Uno en `false` → se oculta el selector y queda un solo idioma.
 
-12. **typewriter-effect**:
-    - Typewriter Effect es una biblioteca que permite simular el efecto de escritura de una máquina de escribir en aplicaciones web.
+El idioma elegido se guarda en `localStorage`.
 
-#### Dependencias de desarrollo (devDependencies):
+## 5. Formulario de contacto (EmailJS)
 
-1. **@types/react**:
-   - Este paquete proporciona definiciones de tipo TypeScript para React.
+1. Crea cuenta en https://www.emailjs.com/ y obtén Service ID, Template ID y Public Key.
+2. Copia `.env.example` a `.env` y rellena:
 
-2. **@types/react-dom**:
-   - Este paquete proporciona definiciones de tipo TypeScript para React DOM.
+```dotenv
+VITE_SERVICE_ID=tu_service_id_aqui
+VITE_TEMPLATE_ID=tu_template_id_aqui
+VITE_USER_ID=tu_public_key_aqui
+```
 
-3. **@vitejs/plugin-react-swc**:
-   - Este es un complemento para Vite, un entorno de desarrollo rápido para JavaScript y TypeScript. Ayuda a cargar archivos React utilizando el SWC (Compilador de JavaScript de Estándares Web).
+3. Reinicia `npm run dev` (Vite solo lee el `.env` al arrancar).
 
-4. **eslint**:
-   - ESLint es una herramienta de linting para JavaScript que ayuda a identificar y corregir problemas en el código.
+El `.env` real no se sube a git (está en `.gitignore`). En producción define las mismas 3 variables en Netlify / Render / Docker (ver puntos 7 y 8).
 
-5. **eslint-plugin-react**:
-   - Este es un complemento de ESLint que proporciona reglas específicas para proyectos de React.
+## 6. Scripts y puertos
 
-6. **eslint-plugin-react-hooks**:
-   - Este es un complemento de ESLint que proporciona reglas específicas para los ganchos (hooks) de React.
-
-7. **eslint-plugin-react-refresh**:
-   - Este es un complemento de ESLint que proporciona soporte para la recarga de React.
-
-8. **gh-pages**:
-   - Gh-pages es una herramienta que facilita la implementación de aplicaciones web en GitHub Pages.
-
-9. **vite**:
-   - Vite es un entorno de desarrollo rápido para proyectos de JavaScript y TypeScript que se basa en ESM (Módulos de JavaScript Estándar).
-
-### Personalización
-
-Si deseas personalizar y adaptar este portafolio para tu propio uso, sigue estos pasos:
-
-**Modificar Contenidos:**
-
-   - Todos los contenidos de las secciones (Inicio, Sobre Mí, Habilidades, Educación, Experiencias, Proyectos, Contacto) están almacenados en archivos JSON dentro de la carpeta `public/json/`.
-
-   - Puedes editar estos archivos JSON (`home.json`, `about.json`, `skills.json`, etc.) para reflejar tus propios datos y detalles.
-
-### Configuración del sistema de contacto
-
-Para configurar el sistema de contacto, sigue estos pasos:
-
-1. Crea una cuenta en [EmailJS](https://www.emailjs.com/).
-
-2. Obtén tu service ID, template ID y public user ID de EmailJS. Asegúrate de crear el template del email necesario.
-
-3. Crea un archivo `.env` en la raíz del proyecto y agrega las siguientes variables de entorno con los datos obtenidos de EmailJS:
-
-    ```dotenv
-    VITE_SERVICE_ID=tu_service_ID
-    VITE_TEMPLATE_ID=tu_template_ID
-    VITE_USER_ID=tu_user_ID
-
-    ```
-
-   Asegúrate de reemplazar `'tu_service_ID'`, `'tu_template_ID'` y `'tu_user_ID'` con los valores específicos que obtuviste de EmailJS.
-
-Con estos pasos, habrás configurado correctamente el sistema de contacto en tu aplicación. Este sistema utiliza EmailJS para enviar emails a través de los servicios configurados con las credenciales proporcionadas.
-
-### Cómo subir el portafolio a Netlify
-
-Para llevar a cabo la publicación de tu portafolio en Netlify, sigue estas indicaciones:
-
-1. Subir tu proyecto a GitHub:
-Asegúrate de que tu proyecto se encuentra en un repositorio de GitHub. Si no lo has hecho, inicializa un repositorio git en tu proyecto y súbelo a GitHub.
-
-2. Crear un nuevo sitio en Netlify:
-Ve a la página web de Netlify y crea una cuenta si aún no la tienes. Después de iniciar sesión, haz clic en el botón `Add new site`,  luego presiona `Import an existing project` y selecciona `Deploy with Github ` sigue los pasos para conectar tu repositorio de GitHub.
-
-3. Configurar las variables de entorno en Netlify:
-Una vez que hayas conectado tu repositorio de GitHub, ve a la sección "Site settings" o "Site configuration" en Netlify. Busca la opción para configurar las variables de entorno y agrega las variables VITE_SERVICE_ID, VITE_TEMPLATE_ID y VITE_USER_ID con sus respectivos valores.
-
-Configurar el comando de construcción en Netlify:
-En la misma sección de configuración de Netlify, asegúrate de configurar el comando de construcción de tu proyecto. Para proyectos React Vite, el comando de construcción suele ser npm run build.
-
-Despliegue automático desde GitHub:
-Netlify puede configurarse para desplegar automáticamente tu sitio cada vez que hagas un push a tu repositorio de GitHub. Esto se puede configurar desde la sección "Deploys" en Netlify.
-
-Una vez completados estos pasos, Netlify debería desplegar automáticamente tu aplicación React Vite desde GitHub con las variables de entorno configuradas. Asegúrate de que tu aplicación funciona correctamente después del despliegue.
-
-### Cómo subir a render.com
-
-1. Ingresar a render.com.
-
-2. Conectarse a Render a través de GitHub.
-
-![Render](public/images/render.jpg)
-
-3. Accede al Dashboard y haz clic en el botón llamado `New +`, luego selecciona "Web service".
-
-![Render new](public/images/render_new.jpg)
-
-4. Debes dar permisos y seleccionar el proyecto desde GitHub. 
-
-![Repo](public/images/repo.jpg)
-
-5. Una vez seleccionado el proyecto /portfolio-ts, configura el proyecto; primero escribe un nombre y luego selecciona el runtime como Node o Docker. En este caso, lo realizaré con Node. 
-
-![Node](public/images/node.jpg)
-
-6. Para instalar y construir, puedes dejar la configuración por defecto. Para iniciar el servicio, utiliza `npm run serve` u otro comando que consideres mejor.
-
-![Serve](public/images/serve.jpg)
-
-7. Seleccionar la instancia Free (si no quieres pagar). Luego bajen y verán una sección llamada `Environment Variables` (si no se ve presionen el botón `advanced` y la encontrarás allí). Puedes ingresar las variables de entorno una a una o copiarlas todas dentro de la sección llamada `Add from .env`
-
-![env](public/images/env4.jpg)
-
-8. Luego presionan el botón llamado `Create Web Service` y espera a que se ejecute el deploy. Si hay errores, debes corregir el problema y volver a ejecutar el deploy. En caso de que se realicen cambios en el repositorio de GitHub, se realizará el deploy nuevamente de forma automática.
-
-![DashBoard](public/images/dash.jpg)
-
-9. Para poder acceder a la web, haz clic sobre el nombre del proyecto en el Dashboard y presiona sobre la dirección que aparece debajo del repositorio de GitHub.
-
-![link](public/images/link.jpg)
-
-Con estos pasos, ya podrás acceder a tu portafolio desde Render.
-
-![alt text](public/images/cap_english.jpg)
+| Comando | Qué hace |
+|---|---|
+| `npm run dev` | Desarrollo en http://localhost:4173/ |
+| `npm run build` | Compila TypeScript + Vite a `dist/` |
+| `npm run preview` | Sirve `dist/` localmente |
+| `npm run serve` | Alias de `preview` (usado en Render) |
+| `npm run lint` | ESLint |
+| `npm run deploy` | Build + publica en GitHub Pages (`gh-pages -d dist`) |
+
+Puerto fijo: `4173` (configurado en `vite.config.ts` con `strictPort`).
+
+## 7. Docker
+
+```bash
+docker compose up --build
+```
+
+- Usa `Dockerfile` (Node 22-alpine, build + `preview` en :4173).
+- `docker-compose.yml` mapea `4174:4173` y carga variables desde `.env`.
+- Abrir: http://localhost:4174/
+
+## 8. Deploy
+
+**Netlify:** conecta el repo → Build command `npm run build` → Publish directory `dist` → agrega las 3 vars `VITE_*` en Site settings.
+
+**Render:** New → Web Service desde el repo → Runtime Node → Build `npm install && npm run build` → Start `npm run serve` → agrega las 3 vars `VITE_*` en Environment Variables.
+
+**GitHub Pages:** `npm run deploy` (requiere `homepage` en `package.json`, ya configurado).
+
+## 9. Estructura del proyecto
+
+```
+portfolio-ts/
+├── public/
+│   ├── json/            # ← TODO el contenido editable (ES + *_en)
+│   └── images/          # fotos, capturas
+├── src/
+│   ├── components/      # Menu, SocialIcons, Typewriters...
+│   ├── pages/           # Home, About, Skills, Experiences, Education, Projects, Contact
+│   ├── context/         # idioma (ES/EN) + tema (dark/light)
+│   ├── interfaces/      # tipos TS por sección
+│   ├── assets/css/      # estilos por página
+│   ├── App.tsx          # rutas (/, /about, /skills, /experiences, /education, /projects, /contact)
+│   └── main.tsx
+├── .env.example         # plantilla de EmailJS
+├── Dockerfile / docker-compose.yml
+├── dev.bat              # arranque rápido en Windows
+└── vite.config.ts       # base '/', puerto 4173
+```
+
+**Stack:** React 19, TypeScript, Vite 7, React Router 7, React Bootstrap + MUI, Axios, EmailJS, Typewriter, React Chrono.

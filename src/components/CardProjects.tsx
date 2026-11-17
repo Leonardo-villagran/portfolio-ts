@@ -214,7 +214,7 @@ const CardProjects: React.FC<CardProjectsProps> = (props: CardProjectsProps) => 
                                             {aiPowered && (
                                                 <span className="badge-ai">
                                                     <AutoAwesomeIcon sx={{ fontSize: '0.8rem' }} />
-                                                    IA Powered
+                                                    {language === 'en' ? 'AI Powered' : 'IA Powered'}
                                                 </span>
                                             )}
                                         </div>
@@ -309,4 +309,3 @@ const CardProjects: React.FC<CardProjectsProps> = (props: CardProjectsProps) => 
 };
 
 export default CardProjects;
-
