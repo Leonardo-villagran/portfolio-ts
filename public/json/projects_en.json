@@ -6,7 +6,7 @@
             "title": "Chilean Teaching Portfolio - AI-Powered Educational Platform",
             "bodyText": [
                 "Web application designed for teachers to support the creation and management of their Teaching Portfolio.",
-                "AI-assisted generation of lesson plans, assessments, and educational resources.",
+                "Gemini helps teachers generate lesson plans, assessments, and educational resources.",
                 "Tools designed to support teaching work and structure content according to Chilean educational requirements.",
                 "Frontend developed with React and Vite.",
                 "Backend developed with Node.js and Express, with data persistence in PostgreSQL."
@@ -27,6 +27,7 @@
                 "Node.js",
                 "Express",
                 "PostgreSQL",
+                "Gemini",
                 "Generative AI",
                 "Educational Technology",
                 "Google Cloud Platform",
@@ -136,6 +137,39 @@
                 "Educational Technology",
                 "Docker",
                 "Cloud"
+            ]
+        },
+        {
+            "image": "images/projects/trazabilidad.jpg",
+            "title": "Requirements Traceability - Acquisition Management System",
+            "bodyText": [
+                "Web application for managing acquisition requests from educational establishments and tracking them through administrative processing.",
+                "Organizes each request in a 10-section workflow, with access controlled by role, establishment, and current stage.",
+                "Maintains a chronological audit trail of status changes, responsible users, dates, observations, and associated documents.",
+                "Includes a Kanban board, authenticated document management, PDF reports, and user and establishment administration.",
+                "Frontend built with React and Vite; backend built with Node.js and Express, with PostgreSQL persistence."
+            ],
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/trazabilidad_5"
+                },
+                {
+                    "text": "Live",
+                    "href": "https://incaser-trazabilidad.duckdns.org/"
+                }
+            ],
+            "tags": [
+                "React",
+                "Vite",
+                "Node.js",
+                "Express",
+                "PostgreSQL",
+                "Docker",
+                "Workflow Management",
+                "Audit Trail",
+                "Document Management",
+                "PDF Reports"
             ]
         },
         {

@@ -43,14 +43,8 @@ const CardProjects: React.FC<CardProjectsProps> = (props: CardProjectsProps) => 
     };
 
     // Helper to determine AI projects
-    const isAiProject = (p: Project) => {
-        const titleLower = p.title.toLowerCase();
-        const hasTag = p.tags.some((t: string) => {
-            const tl = t.toLowerCase();
-            return tl.includes('ai') || tl.includes('ia') || tl.includes('gemini') || tl.includes('generative');
-        });
-        return hasTag || titleLower.includes('ia') || titleLower.includes('ai');
-    };
+    const isAiProject = (p: Project) =>
+        [p.title, ...p.tags].some(text => /\b(ai|ia|genai|gemini|artificial intelligence|inteligencia artificial)\b/i.test(text));
 
     // Helper to determine Cloud/Docker projects
     const isCloudProject = (p: Project) => {

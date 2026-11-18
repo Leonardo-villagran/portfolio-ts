@@ -381,6 +381,7 @@
 .project-tags {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.4rem;
   padding: 0.9rem 1.4rem 1.25rem;
   border-top: 1px solid rgba(255, 255, 255, 0.06);

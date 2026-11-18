@@ -99,6 +99,7 @@ const Home: React.FC = () => {
         '🐍 Python & Flask',
         '🗄️ PostgreSQL & Qdrant',
         '☁️ Docker & GCP',
+        '🛠️ TypeScript & Vite',
     ];
 
     return (
